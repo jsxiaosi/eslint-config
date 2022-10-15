@@ -1,0 +1,30 @@
+{
+  "name": "@jsxiaosi/eslint-config-base",
+  "version": "0.0.1",
+  "description": "",
+  "author": "jsxiaosi",
+  "license": "MIT",
+  "homepage": "https://github.com/jsxiaosi/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-jsonc": "^2.4.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "jsonc-eslint-parser": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0"
+  }
+}
