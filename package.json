@@ -1,8 +1,10 @@
 {
-  "name": "eslint-config",
-  "version": "0.0.1",
+  "name": "@jsxiaosi/eslint-config",
+  "version": "0.0.3",
   "description": "eslint 配置",
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",

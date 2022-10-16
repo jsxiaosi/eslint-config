@@ -11,6 +11,11 @@ module.exports = {
           jsx: true,
         },
       },
+      rules: {
+        'no-unused-vars': 'off',
+        'no-undef': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+      },
     },
   ],
   rules: {
@@ -35,7 +40,7 @@ module.exports = {
     'vue/component-tags-order': [
       'error',
       {
-        order: ['template', 'script', 'style'],
+        order: ['script', 'template', 'style'],
       },
     ],
 

@@ -196,7 +196,7 @@ module.exports = {
     // 禁止不必要的 catch 子句
     'no-useless-catch': 'error',
     // 禁用不必要的转义字符
-    'no-useless-escape': 'error',
+    'no-useless-escape': 'off',
     // 禁用 with 语句
     'no-with': 'error',
 
