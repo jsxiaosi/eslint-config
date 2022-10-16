@@ -1,0 +1,33 @@
+{
+  "name": "@jsxiaosi/eslint-config-ts",
+  "version": "0.0.1",
+  "description": "",
+  "author": "jsxiaosi",
+  "license": "MIT",
+  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/typescript",
+  "keywords": [
+    "eslint-config-ts"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@jsxiaosi/eslint-config-base": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0"
+  }
+}

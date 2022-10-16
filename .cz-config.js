@@ -1,4 +1,5 @@
 module.exports = {
+  extends:[],
   types: [
     { emoji: '', value: 'feature', name: 'feature:   新功能' },
     { emoji: '', value: 'fixbug', name: 'fixbug:    修复' },

@@ -1,12 +1,12 @@
 {
-  "name": "@jsxiaosi/eslint-config-base",
-  "version": "1.0.0",
+  "name": "@jsxiaosi/eslint-config-vue",
+  "version": "0.0.1",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
-  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/base",
+  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/vue",
   "keywords": [
-    "eslint-config-base"
+    "eslint-config-vue"
   ],
   "main": "index.js",
   "files": [
@@ -22,10 +22,8 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "eslint-plugin-html": "^7.1.0",
-    "eslint-plugin-jsonc": "^2.4.0",
-    "eslint-plugin-markdown": "^3.0.0",
-    "jsonc-eslint-parser": "^2.1.0"
+    "@jsxiaosi/eslint-config-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.4.0"
   },
   "devDependencies": {
     "eslint": "^8.23.0"
