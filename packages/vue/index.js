@@ -3,14 +3,6 @@ module.exports = {
   overrides: [
     {
       files: ['*.vue'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
       rules: {
         'no-unused-vars': 'off',
         'no-undef': 'off',
@@ -18,6 +10,14 @@ module.exports = {
       },
     },
   ],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   rules: {
     /* -------------->  Essential        <-------------- */
     // 禁止在组件上使用v-text/v-html
