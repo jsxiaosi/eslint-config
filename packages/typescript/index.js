@@ -4,10 +4,19 @@ const base = require('@jsxiaosi/eslint-config-base');
 module.exports = {
   extends: [
     '@jsxiaosi/eslint-config-base',
+    'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
+    },
+  },
   overrides: base.overrides,
   rules: {
+    // 确保命名导入对应于远程文件中的命名导出
+    'import/named': 'off',
+
     // 强制使用@ts-ignore 在末尾添加注释 例子：@ts-ignore: Unreachable code error
     '@typescript-eslint/ban-ts-comment': [
       'error',

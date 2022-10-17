@@ -11,14 +11,19 @@ module.exports = {
   },
   reportUnusedDisableDirectives: true,
   extends: [
+    'plugin:import/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:markdown/recommended',
   ],
-  plugins: ['html'],
+  plugins: ['html', 'promise'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
     },
+  },
+  // 在 eslint 中支持异步函数 https://github.com/eslint/eslint/issues/8366
+  parserOptions: {
+    ecmaVersion: 2017,
   },
   overrides: [
     {
@@ -108,6 +113,12 @@ module.exports = {
             order: ['types', 'require', 'import'],
           },
         ],
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'import/no-duplicates': 'off',
       },
     },
   ],
@@ -231,11 +242,11 @@ module.exports = {
     'no-this-before-super': 'error',
     // 要求 generator 函数内有 yield
     'require-yield': 'error',
-    'arrow-spacing': ['error', { 'before': true, 'after': true }],
+    'arrow-spacing': ['error', { before: true, after: true }],
 
     /* -------------->      风格      <-------------- */
     // 大括号风格要求
-    'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     // 强制逗号风格
     'comma-style': ['error', 'last'],
     // 强制驼峰命名
@@ -262,5 +273,51 @@ module.exports = {
     'no-unsafe-optional-chaining': 'error',
     // 禁止正则表达式中无用的反向引用 https://eslint.org/docs/latest/rules/no-useless-backreference
     'no-useless-backreference': 'error',
+
+    /* -------------->    promise    <-------------- */
+    // 强制使用then时要用catch()或者finally()
+    'promise/catch-or-return': [
+      'error',
+      { terminationMethod: ['catch', 'finally'] },
+    ],
+    // Promise.resolve避免在不需要时或Promise.reject在不需要时包装值
+    'promise/no-return-wrap': 'error',
+    // 强制执行一致的参数名称顺序
+    'promise/param-names': 'error',
+    // 强制then有返回值
+    'promise/always-return': 'off',
+    // 在 ES5 环境中，确保Promise在使用之前创建一个构造函数。
+    'promise/no-native': 'off',
+    // 避免嵌套then()orcatch()语句
+    'promise/no-nesting': 'warn',
+    // 避免在回调用使用Promise
+    'promise/no-promise-in-callback': 'warn',
+    // 避免在or (no-callback-in-promise)cb()内部调用then()catch()
+    'promise/no-callback-in-promise': 'warn',
+    // 避免调用new Promise静态方法
+    'promise/no-new-statics': 'error',
+    // 禁止使用 Promise 构造函数执行器函数中多次解析路径
+    'promise/no-multiple-resolved': 'error',
+    // 更喜欢用async await 方式
+    'promise/prefer-await-to-then': 'error',
+    'promise/prefer-await-to-callbacks': 'error',
+
+    /* -------------->     import     <-------------- */
+    // 在模块导入顺序中强制执行约定
+    'import/order': 'error',
+    // 确保所有导入出现在其他语句之前
+    'import/first': 'error',
+    // 禁止使用可变的变量导出
+    'import/no-mutable-exports': 'error',
+    // 确保导入指向可以解析的文件/模块
+    'import/no-unresolved': 'off',
+    // 禁止使用绝对路径导入模块
+    'import/no-absolute-path': 'off',
+    // 报告使用导出名称作为默认导出属性
+    'import/no-named-as-default-member': 'off',
+    // 报告使用导出名称作为默认导出标识符
+    'import/no-named-as-default': 'off',
+    // 禁止命名空间
+    'import/namespace': 'off',
   },
 };
