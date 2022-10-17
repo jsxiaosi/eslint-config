@@ -15,7 +15,7 @@ module.exports = {
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:markdown/recommended',
   ],
-  plugins: ['html', 'promise'],
+  plugins: ['html'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -273,34 +273,6 @@ module.exports = {
     'no-unsafe-optional-chaining': 'error',
     // 禁止正则表达式中无用的反向引用 https://eslint.org/docs/latest/rules/no-useless-backreference
     'no-useless-backreference': 'error',
-
-    /* -------------->    promise    <-------------- */
-    // 强制使用then时要用catch()或者finally()
-    'promise/catch-or-return': [
-      'error',
-      { terminationMethod: ['catch', 'finally'] },
-    ],
-    // Promise.resolve避免在不需要时或Promise.reject在不需要时包装值
-    'promise/no-return-wrap': 'error',
-    // 强制执行一致的参数名称顺序
-    'promise/param-names': 'error',
-    // 强制then有返回值
-    'promise/always-return': 'off',
-    // 在 ES5 环境中，确保Promise在使用之前创建一个构造函数。
-    'promise/no-native': 'off',
-    // 避免嵌套then()orcatch()语句
-    'promise/no-nesting': 'warn',
-    // 避免在回调用使用Promise
-    'promise/no-promise-in-callback': 'warn',
-    // 避免在or (no-callback-in-promise)cb()内部调用then()catch()
-    'promise/no-callback-in-promise': 'warn',
-    // 避免调用new Promise静态方法
-    'promise/no-new-statics': 'error',
-    // 禁止使用 Promise 构造函数执行器函数中多次解析路径
-    'promise/no-multiple-resolved': 'error',
-    // 更喜欢用async await 方式
-    'promise/prefer-await-to-then': 'error',
-    'promise/prefer-await-to-callbacks': 'error',
 
     /* -------------->     import     <-------------- */
     // 在模块导入顺序中强制执行约定

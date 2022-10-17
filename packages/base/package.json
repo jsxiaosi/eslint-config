@@ -26,7 +26,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.4.0",
     "eslint-plugin-markdown": "^3.0.0",
-    "eslint-plugin-promise": "^6.1.0",
     "jsonc-eslint-parser": "^2.1.0"
   },
   "devDependencies": {
