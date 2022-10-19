@@ -9,6 +9,20 @@ module.exports = {
     navigator: 'readonly',
     window: 'readonly',
   },
+  ignorePatterns: [
+    '*.min.*',
+    '*.d.ts',
+    'CHANGELOG.md',
+    'dist',
+    'LICENSE*',
+    'output',
+    'coverage',
+    'public',
+    'temp',
+    'package-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+  ],
   reportUnusedDisableDirectives: true,
   extends: [
     'plugin:import/recommended',
@@ -23,7 +37,11 @@ module.exports = {
   },
   // 在 eslint 中支持异步函数 https://github.com/eslint/eslint/issues/8366
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 2022,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
   },
   overrides: [
     {
@@ -34,20 +52,11 @@ module.exports = {
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],
         'jsonc/indent': ['error', 2],
-        'jsonc/key-spacing': [
-          'error',
-          { beforeColon: false, afterColon: true },
-        ],
+        'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'jsonc/no-octal-escape': 'error',
-        'jsonc/object-curly-newline': [
-          'error',
-          { multiline: true, consistent: true },
-        ],
+        'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
-        'jsonc/object-property-newline': [
-          'error',
-          { allowMultiplePropertiesPerLine: true },
-        ],
+        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
       },
     },
     {
@@ -119,6 +128,24 @@ module.exports = {
       files: ['*.d.ts'],
       rules: {
         'import/no-duplicates': 'off',
+      },
+    },
+    {
+      // 忽略检查md文件代码块
+      files: ['**/*.md/*.*'],
+      rules: {
+        '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/comma-dangle': 'off',
+        'import/no-unresolved': 'off',
+        'no-alert': 'off',
+        'no-console': 'off',
+        'no-restricted-imports': 'off',
+        'no-undef': 'off',
+        'no-unused-expressions': 'off',
+        'no-unused-vars': 'off',
       },
     },
   ],
@@ -250,7 +277,7 @@ module.exports = {
     // 强制逗号风格
     'comma-style': ['error', 'last'],
     // 强制驼峰命名
-    'camelcase': 'off',
+    camelcase: 'off',
     // 强制括号内使用空格
     'array-bracket-spacing': ['error', 'never'],
     // 禁止或强制在代码块中开括号前和闭括号后有空格

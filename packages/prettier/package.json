@@ -1,10 +1,10 @@
 {
-  "name": "@jsxiaosi/eslint-config-ts",
+  "name": "@jsxiaosi/eslint-config-prettier",
   "version": "0.0.7",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
-  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/typescript",
+  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier",
   "keywords": [
     "eslint-config-ts"
   ],
@@ -19,13 +19,12 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
-    "eslint": ">=7.4.0",
-    "typescript": ">=3.9"
+    "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@jsxiaosi/eslint-config-base": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.1"
   },
   "devDependencies": {
     "eslint": "^8.23.0"

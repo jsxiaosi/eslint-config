@@ -18,10 +18,7 @@ module.exports = {
     'import/named': 'off',
 
     // 强制使用@ts-ignore 在末尾添加注释 例子：@ts-ignore: Unreachable code error
-    '@typescript-eslint/ban-ts-comment': [
-      'error',
-      { 'ts-ignore': 'allow-with-description' },
-    ],
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     // 强制使用@ts-expect-error
     '@typescript-eslint/prefer-ts-expect-error': 'error',
     // 强制定义对象类型使用interface或type
@@ -40,8 +37,8 @@ module.exports = {
       },
     ],
     // 强制大括号风格要求
-    "brace-style": "off",
-    "@typescript-eslint/brace-style": "warn",
+    'brace-style': 'off',
+    '@typescript-eslint/brace-style': 'warn',
 
     // 禁止使用any类型
     '@typescript-eslint/no-explicit-any': 'off',

@@ -1,5 +1,14 @@
 {
-  "extends":[
-    "@jsxiaosi/eslint-config-base"
-  ]
+  "extends": [
+    "@jsxiaosi/eslint-config-base",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "usePrettierrc": true
+      }
+    ]
+  }
 }
