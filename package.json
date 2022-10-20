@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
     "prepare": "husky install",
-    "cz": "czg"
+    "cz": "czg",
+    "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0"
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,7 @@
   },
   "homepage": "https://github.com/jsxiaosi/eslint-config/tree/readme#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "commitizen": "^4.2.5",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^7.0.0",
+    "conventional-changelog-cli": "^2.2.2",
     "czg": "^1.3.11",
     "eslint": "^8.23.0",
     "husky": "^8.0.0",
