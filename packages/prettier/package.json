@@ -19,14 +19,15 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
-    "eslint": ">=7.4.0"
+    "eslint": ">=7.4.0",
+    "prettier": ">=2.0.0"
   },
   "dependencies": {
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "2.7.1"
+    "eslint-config-prettier": "^8.5.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.23.0",
+    "prettier": "2.7.1"
   }
 }

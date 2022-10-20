@@ -7,7 +7,7 @@
 ## 安装
 
 ```base
-pnpm add -D @jsxiaosi/eslint-config-prettier
+pnpm add -D @jsxiaosi/eslint-config-prettier prettier
 ```
 
 ## 配置.prettier.config.js
