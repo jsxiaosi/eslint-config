@@ -16,6 +16,11 @@ module.exports = {
       jsx: true,
     },
   },
+  // 添加uni-app支持
+  globals: {
+    uni: true,
+    wx: true,
+  },
   rules: {
     /* -------------->  Essential        <-------------- */
     // 禁止在组件上使用v-text/v-html

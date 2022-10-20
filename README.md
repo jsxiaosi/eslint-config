@@ -7,7 +7,7 @@
 
 ## 安装及使用
 
-- [Eslint]([./packages/base/README.md](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base))
-- [Prettier]([./packages/base/README.md](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier))
-- [Typescript]([./packages/base/README.md](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base))
-- [Vue]([./packages/base/README.md](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base))
+- [Eslint](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
+- [Prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier)
+- [Typescript](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
+- [Vue](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
