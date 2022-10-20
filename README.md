@@ -11,3 +11,4 @@
 - [Prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier)
 - [Typescript](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
 - [Vue](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
+- [CommitLint](https://github.com/jsxiaosi/eslint-config/tree/main/packages/commitlint)
