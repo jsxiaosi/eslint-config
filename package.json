@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "eslint 配置",
   "publishConfig": {
     "access": "public"
