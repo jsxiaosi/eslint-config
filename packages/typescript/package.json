@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config-ts",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -24,10 +24,10 @@
   },
   "dependencies": {
     "@jsxiaosi/eslint-config-base": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1"
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.29.0"
   }
 }

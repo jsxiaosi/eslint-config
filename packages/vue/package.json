@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config-vue",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -23,9 +23,9 @@
   },
   "dependencies": {
     "@jsxiaosi/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "^9.4.0"
+    "eslint-plugin-vue": "^9.8.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.29.0"
   }
 }

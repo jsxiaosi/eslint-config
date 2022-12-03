@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config-base",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -24,11 +24,11 @@
   "dependencies": {
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsonc": "^2.4.0",
+    "eslint-plugin-jsonc": "^2.5.0",
     "eslint-plugin-markdown": "^3.0.0",
     "jsonc-eslint-parser": "^2.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.29.0"
   }
 }
