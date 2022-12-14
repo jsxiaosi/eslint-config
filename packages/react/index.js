@@ -1,11 +1,4 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-    node: true,
-  },
   settings: {
     react: {
       version: 'detect',
@@ -53,8 +46,6 @@ module.exports = {
     'react/self-closing-comp': 'warn',
     // 禁止循环没有key
     'react/jsx-key': 'warn',
-    // 禁止使用未知的dom属性
-    'react/no-unknown-property': ['error', { ignore: ['css'] }],
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
