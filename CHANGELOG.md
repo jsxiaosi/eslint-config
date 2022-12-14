@@ -1,8 +1,16 @@
+## <small>0.0.13 (2022-12-14)</small>
+
+* fix(react): 🐛 delete react/no-unknown-property ([cd57d2a](https://github.com/jsxiaosi/eslint-config/commit/cd57d2a))
+* build: 📦️ - ([82568da](https://github.com/jsxiaosi/eslint-config/commit/82568da))
+
+
+
 ## <small>0.0.12 (2022-12-14)</small>
 
+* docs: 📝 [base] ([82c4211](https://github.com/jsxiaosi/eslint-config/commit/82c4211))
+* docs: 📝 v0.0.12 ([b240151](https://github.com/jsxiaosi/eslint-config/commit/b240151))
 * feat(react): ✨ add react eslint ([f02edc6](https://github.com/jsxiaosi/eslint-config/commit/f02edc6))
 * build: 📦️ [base] ([e019cd7](https://github.com/jsxiaosi/eslint-config/commit/e019cd7))
-* docs: 📝 [base] ([82c4211](https://github.com/jsxiaosi/eslint-config/commit/82c4211))
 
 
 
