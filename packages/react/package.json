@@ -1,12 +1,12 @@
 {
-  "name": "@jsxiaosi/eslint-config-vue",
+  "name": "@jsxiaosi/eslint-config-react",
   "version": "0.0.12",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
-  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/vue#jsxiaosieslint-config-vue",
+  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/vue#jsxiaosieslint-config-react",
   "keywords": [
-    "eslint-config-vue"
+    "eslint-config-react"
   ],
   "main": "index.js",
   "files": [
@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@jsxiaosi/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "^9.8.0"
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
     "eslint": "^8.29.0"

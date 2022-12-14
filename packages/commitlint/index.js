@@ -37,7 +37,7 @@ module.exports = {
      *      ^^^^^
      */
     // scope：单词格式
-    'scope-case': [2, 'always', 'lower-case'],
+    'scope-case': [2, 'always', ['lower-case', 'upper-case', 'start-case', 'pascal-case']],
     /**
      * subject：commit 描述
      * feat(scope): feat add .....
