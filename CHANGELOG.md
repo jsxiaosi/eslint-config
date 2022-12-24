@@ -1,5 +1,6 @@
 ## <small>0.0.14 (2022-12-24)</small>
 
+* fix(vue): 🐛 修改解析器指定文件 ([635f243](https://github.com/jsxiaosi/eslint-config/commit/635f243))
 
 
 
