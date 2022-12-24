@@ -1,5 +1,11 @@
+## <small>0.0.14 (2022-12-24)</small>
+
+
+
+
 ## <small>0.0.13 (2022-12-14)</small>
 
+* feat: ✨ v0.0.13 ([405cfdd](https://github.com/jsxiaosi/eslint-config/commit/405cfdd))
 * fix(react): 🐛 delete react/no-unknown-property ([cd57d2a](https://github.com/jsxiaosi/eslint-config/commit/cd57d2a))
 * build: 📦️ - ([82568da](https://github.com/jsxiaosi/eslint-config/commit/82568da))
 

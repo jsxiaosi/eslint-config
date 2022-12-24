@@ -1,21 +1,21 @@
 module.exports = {
-  extends: ['@jsxiaosi/eslint-config-ts', 'plugin:vue/vue3-recommended'],
+  extends: ['plugin:vue/vue3-recommended', '@jsxiaosi/eslint-config-ts'],
   overrides: [
     {
       files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       rules: {
         'no-undef': 'off',
       },
     },
   ],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
   // 添加uni-app支持
   globals: {
     uni: true,
