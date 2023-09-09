@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "eslint 配置",
   "publishConfig": {
     "access": "public"
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/jsxiaosi/eslint-config/tree/readme#readme",
   "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
     "conventional-changelog-cli": "^2.2.2",
     "czg": "^1.3.12",
     "eslint": "^8.29.0",

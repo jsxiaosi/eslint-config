@@ -1,6 +1,6 @@
 {
   "name": "@jsxiaosi/eslint-config-prettier",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -23,8 +23,8 @@
     "prettier": ">=2.0.0"
   },
   "dependencies": {
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-config-prettier": "^8.5.0"
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-config-prettier": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "^8.29.0",
