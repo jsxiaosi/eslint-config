@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@jsxiaosi/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "^9.8.0"
+    "eslint-plugin-vue": "^9.17.0"
   },
   "devDependencies": {
     "eslint": "^8.29.0"
