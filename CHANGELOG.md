@@ -1,6 +1,12 @@
-## <small>0.0.14 (2022-12-24)</small>
+## <small>0.0.17 (2023-09-10)</small>
 
+* fix(prettier): 🐛 依赖 ([73e904e](https://github.com/jsxiaosi/eslint-config/commit/73e904e))
+* fix(typescript): 🐛 version ([baf3d98](https://github.com/jsxiaosi/eslint-config/commit/baf3d98))
 * fix(vue): 🐛 修改解析器指定文件 ([635f243](https://github.com/jsxiaosi/eslint-config/commit/635f243))
+* build: 📦️ version ([23fc845](https://github.com/jsxiaosi/eslint-config/commit/23fc845))
+* build: 📦️ version ([613a811](https://github.com/jsxiaosi/eslint-config/commit/613a811))
+* build(vue): 📦️ version ([710afa6](https://github.com/jsxiaosi/eslint-config/commit/710afa6))
+* feat: ✨ v0.0.14 ([07c1183](https://github.com/jsxiaosi/eslint-config/commit/07c1183))
 
 
 
