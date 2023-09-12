@@ -1,12 +1,12 @@
 {
-  "name": "@jsxiaosi/eslint-config-react",
+  "name": "@jsxiaosi/eslint-config-uni-app",
   "version": "0.0.18",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
-  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/vue#jsxiaosieslint-config-react",
+  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/vue#jsxiaosieslint-config-uni-app",
   "keywords": [
-    "eslint-config-react"
+    "eslint-config-uni-app"
   ],
   "main": "index.js",
   "files": [
@@ -22,9 +22,7 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@jsxiaosi/eslint-config-ts": "workspace:*",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "@jsxiaosi/eslint-config-vue": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^8.29.0"
