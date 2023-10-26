@@ -21,6 +21,7 @@
   },
   "peerDependencies": {
     "commitizen": ">=4.2.5",
+    "commitlint": ">=17.7.1",
     "husky": ">=8.0.0",
     "czg": ">=1.3.11"
   },
