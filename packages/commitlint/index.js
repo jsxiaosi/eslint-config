@@ -21,6 +21,7 @@
 //   ?.match(/page%%((\w|-)*)/)?.[1]
 
 /** @type {import('cz-git').UserConfig} */
+
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
