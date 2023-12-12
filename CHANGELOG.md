@@ -1,12 +1,24 @@
+## <small>0.0.21 (2023-12-12)</small>
+
+* build(commitlint,prettier,react,typescript,vue): 📦️ 依赖 ([6d76283](https://github.com/jsxiaosi/eslint-config/commit/6d76283))
+* fix(vue): 🐛 dependencies ([861d0c2](https://github.com/jsxiaosi/eslint-config/commit/861d0c2))
+* feat: ✨ version ([f9d39c7](https://github.com/jsxiaosi/eslint-config/commit/f9d39c7))
+* feat(uni-app): ✨ uni-app ([a3098ad](https://github.com/jsxiaosi/eslint-config/commit/a3098ad))
+* build(commitlint): 📦️ commitlint ([5fce026](https://github.com/jsxiaosi/eslint-config/commit/5fce026))
+* build(commitlint): 📦️ commitlint ([8858f03](https://github.com/jsxiaosi/eslint-config/commit/8858f03))
+
+
+
 ## <small>0.0.17 (2023-09-10)</small>
 
+* feat: ✨ v0.0.14 ([07c1183](https://github.com/jsxiaosi/eslint-config/commit/07c1183))
+* feat: ✨ v0.0.17 ([cb040c7](https://github.com/jsxiaosi/eslint-config/commit/cb040c7))
 * fix(prettier): 🐛 依赖 ([73e904e](https://github.com/jsxiaosi/eslint-config/commit/73e904e))
 * fix(typescript): 🐛 version ([baf3d98](https://github.com/jsxiaosi/eslint-config/commit/baf3d98))
 * fix(vue): 🐛 修改解析器指定文件 ([635f243](https://github.com/jsxiaosi/eslint-config/commit/635f243))
 * build: 📦️ version ([23fc845](https://github.com/jsxiaosi/eslint-config/commit/23fc845))
 * build: 📦️ version ([613a811](https://github.com/jsxiaosi/eslint-config/commit/613a811))
 * build(vue): 📦️ version ([710afa6](https://github.com/jsxiaosi/eslint-config/commit/710afa6))
-* feat: ✨ v0.0.14 ([07c1183](https://github.com/jsxiaosi/eslint-config/commit/07c1183))
 
 
 
@@ -37,10 +49,10 @@
 * build: 📦️ 删除多余依赖 ([6f6af12](https://github.com/jsxiaosi/eslint-config/commit/6f6af12))
 * feat: ✨ add commlint ([67f4467](https://github.com/jsxiaosi/eslint-config/commit/67f4467))
 * feat(commitlint): ✨ add commitlint config ([05e2ba8](https://github.com/jsxiaosi/eslint-config/commit/05e2ba8))
+* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * feature: add eslint base ts vue ([1923799](https://github.com/jsxiaosi/eslint-config/commit/1923799))
 * feature: add eslint-config project ([b7f785c](https://github.com/jsxiaosi/eslint-config/commit/b7f785c))
 * feature: improt  promise ([c5a3243](https://github.com/jsxiaosi/eslint-config/commit/c5a3243))
-* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * chore: 0.0.6 ([3782e7c](https://github.com/jsxiaosi/eslint-config/commit/3782e7c))
 * chore: delete promise eslint ([25b39ba](https://github.com/jsxiaosi/eslint-config/commit/25b39ba))
 * fixbug: base version 0.0.1 ([40703b4](https://github.com/jsxiaosi/eslint-config/commit/40703b4))
