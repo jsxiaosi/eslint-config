@@ -1,16 +1,9 @@
-const pluginJsonc = require('eslint-plugin-jsonc');
-const pluginMarkdown = require('eslint-plugin-markdown');
-const jsoncParser = require('jsonc-eslint-parser');
-const pluginImport = require('eslint-plugin-import-x');
-const html = require('eslint-plugin-html');
-const globals = require('globals');
+import pluginJsonc from 'eslint-plugin-jsonc';
+import 'eslint-plugin-markdown';
+import jsoncParser from 'jsonc-eslint-parser';
+import * as pluginImport from 'eslint-plugin-import-x';
 
-module.exports = [
-  ...pluginMarkdown.configs.recommended,
-  {
-    files: ['**/*.html'],
-    plugins: { html },
-  },
+const index = [
   {
     files: ['*.json', '*.json5'],
     languageOptions: {
@@ -27,7 +20,6 @@ module.exports = [
       'jsonc/object-curly-spacing': ['error', 'always'],
       'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
     },
-    name: 'jsxiaosi/base/jsonc/standard',
   },
   {
     files: ['package.json'],
@@ -95,19 +87,16 @@ module.exports = [
         },
       ],
     },
-    name: 'jsxiaosi/base/jsonc/package',
   },
-
+  {
+    files: ['*.d.ts'],
+    rules: {
+      'import/no-duplicates': 'off',
+    },
+  },
   {
     // 忽略检查md文件代码块
-    files: ['**/*.md'],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: true,
-        },
-      },
-    },
+    files: ['**/*.md/*.*'],
     rules: {
       '@typescript-eslint/no-redeclare': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
@@ -122,18 +111,13 @@ module.exports = [
       'no-unused-expressions': 'off',
       'no-unused-vars': 'off',
     },
-    name: 'jsxiaosi/base/markdown',
   },
   {
     languageOptions: {
-      ecmaVersion: 2022,
       globals: {
         browser: true,
         es6: true,
         node: true,
-        ...globals.browser,
-        ...globals.es2021,
-        ...globals.node,
         document: 'readonly',
         navigator: 'readonly',
         window: 'readonly',
@@ -163,6 +147,11 @@ module.exports = [
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
+    // extends: [
+    //   'plugin:import/recommended',
+    //   'plugin:jsonc/recommended-with-jsonc',
+    //   'plugin:markdown/recommended',
+    // ],
     plugins: {
       jsonc: pluginJsonc,
       import: pluginImport,
@@ -173,9 +162,7 @@ module.exports = [
       },
     },
     // 在 eslint 中支持异步函数 https://github.com/eslint/eslint/issues/8366
-
     // overrides: [
-
     // ],
     rules: {
       /* -------------->  错误逻辑相关  <-------------- */
@@ -239,7 +226,6 @@ module.exports = [
       'valid-typeof': 'error',
       // 要求使用 isNaN() 检查 NaN
       'use-isnan': 'error',
-
       /* --------------> Best-Practice <-------------- */
       // 不允许在 case 子句中使用词法声明
       'no-case-declarations': 'error',
@@ -265,9 +251,6 @@ module.exports = [
       'no-useless-escape': 'off',
       // 禁用 with 语句
       'no-with': 'error',
-      // 等量等量比较
-      eqeqeq: ['error', 'smart'],
-
       /* -------------->      变量      <-------------- */
       // 禁止删除变量
       'no-delete-var': 'error',
@@ -283,7 +266,6 @@ module.exports = [
           varsIgnorePattern: '^_',
         },
       ],
-
       /* -------------->      ES6      <-------------- */
       // 要求在构造函数中有 super() 的调用
       'constructor-super': 'error',
@@ -300,7 +282,6 @@ module.exports = [
       // 要求 generator 函数内有 yield
       'require-yield': 'error',
       'arrow-spacing': ['error', { before: true, after: true }],
-
       /* -------------->      风格      <-------------- */
       // 大括号风格要求
       'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
@@ -314,7 +295,6 @@ module.exports = [
       'block-spacing': ['error', 'always'],
       // 禁止空格和 tab 的混合缩进
       'no-mixed-spaces-and-tabs': 'error',
-
       /* -------------->      其他      <-------------- */
       // 禁止同一if/else-if链中出现重复条件
       'no-dupe-else-if': 'error',
@@ -330,7 +310,6 @@ module.exports = [
       'no-unsafe-optional-chaining': 'error',
       // 禁止正则表达式中无用的反向引用 https://eslint.org/docs/latest/rules/no-useless-backreference
       'no-useless-backreference': 'error',
-
       /* -------------->     import     <-------------- */
       // 在模块导入顺序中强制执行约定
       'import/order': 'error',
@@ -349,6 +328,7 @@ module.exports = [
       // 禁止命名空间
       'import/namespace': 'off',
     },
-    name: 'jsxiaosi/base/javascript',
   },
 ];
+
+export { index as default };

@@ -1,24 +1,28 @@
-module.exports = {
-  extends: ['@jsxiaosi/eslint-config-vue'],
-  overrides: [
-    {
-      files: ['*.nvue'],
-      parser: 'vue-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      rules: {
-        'no-undef': 'off',
+const vueConfig = require('@jsxiaosi/eslint-config-vue');
+const parserVue = require('vue-eslint-parser');
+const parserTs = require('@typescript-eslint/parser');
+
+module.exports = [
+  ...vueConfig,
+  {
+    files: ['*.nvue'],
+    parser: parserVue,
+    parserOptions: {
+      parser: parserTs,
+      sourceType: 'module',
+      ecmaFeatures: {
+        jsx: true,
       },
     },
-  ],
-  // 添加uni-app支持
-  globals: {
-    uni: true,
-    wx: true,
+    rules: {
+      'no-undef': 'off',
+    },
   },
-};
+  {
+    // 添加uni-app支持
+    globals: {
+      uni: true,
+      wx: true,
+    },
+  },
+];

@@ -24,6 +24,8 @@ pnpm add -D @jsxiaosi/eslint-config-base
 {
   "lint:fix": "eslint . --fix"
 }
+
+
 ```
 
 ## VS Code 自动修复
