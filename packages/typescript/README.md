@@ -10,12 +10,16 @@
 pnpm add -D @jsxiaosi/eslint-config-ts
 ```
 
-## 配置.eslintrc
+## 配置eslint.config
 
-```base
-{
-  "extends": ["@jsxiaosi/eslint-config-ts"]
-}
+```javascript
+import jsxiaosiConfig from "@jsxiaosi/eslint-config-ts"
+
+export default [
+  ...jsxiaosiConfig,
+
+  // {...}  you config
+]
 ```
 
 ## 添加命令

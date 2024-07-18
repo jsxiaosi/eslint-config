@@ -11,12 +11,16 @@
 pnpm add -D @jsxiaosi/eslint-config-vue
 ```
 
-## 配置.eslintrc
+## 配置eslint.config
 
-```base
-{
-  "extends": ["@jsxiaosi/eslint-config-vue"]
-}
+```javascript
+import jsxiaosiConfig from "@jsxiaosi/eslint-config-vue"
+
+export default [
+  ...jsxiaosiConfig,
+
+  // {...}  you config
+]
 ```
 
 ## 添加命令

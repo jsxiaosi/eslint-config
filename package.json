@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
     "lint:eslint": "eslint . --fix",
-    "prepare": "husky install",
+    "prepare": "husky",
     "cz": "czg",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
     "build": "unbuild"

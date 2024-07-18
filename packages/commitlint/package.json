@@ -20,10 +20,11 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
+    "@commitlint/cli": ">=19",
     "commitizen": ">=4.2.5",
-    "commitlint": ">=19.0.0",
-    "husky": ">=8.0.0",
-    "czg": ">=1.3.11"
+    "commitlint": ">=19",
+    "czg": ">=1.3.11",
+    "husky": ">=8.0.0"
   },
   "dependencies": {
     "@commitlint/cli": "^19.3.0",
