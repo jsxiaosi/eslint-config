@@ -1,1 +1,5 @@
 node_modules/
+
+
+packages/eslint/src/typegen.d.ts
+packages/eslint/dist

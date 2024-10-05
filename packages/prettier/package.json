@@ -23,8 +23,8 @@
     "prettier": ">=3.0.0"
   },
   "dependencies": {
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-config-prettier": "^9.1.0"
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^8.29.0",

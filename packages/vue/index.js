@@ -1,7 +1,7 @@
 const tsConfig = require('@jsxiaosi/eslint-config-ts');
+const parserTs = require('@typescript-eslint/parser');
 const pluginVue = require('eslint-plugin-vue');
 const parserVue = require('vue-eslint-parser');
-const parserTs = require('@typescript-eslint/parser');
 
 module.exports = [
   ...tsConfig,

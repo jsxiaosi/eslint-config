@@ -7,8 +7,8 @@
 
 ## 安装及使用
 
-- [Eslint](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
-- [Prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier)
-- [Typescript](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
-- [Vue](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base)
+- [Eslint](https://github.com/jsxiaosi/eslint-config/tree/main/packages/eslint)
 - [CommitLint](https://github.com/jsxiaosi/eslint-config/tree/main/packages/commitlint)
+- [Prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier) (弃用)
+- [Typescript](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base) (弃用)
+- [Vue](https://github.com/jsxiaosi/eslint-config/tree/main/packages/base) (弃用)

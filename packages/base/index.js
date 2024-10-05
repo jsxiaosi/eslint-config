@@ -1,9 +1,9 @@
+const html = require('eslint-plugin-html');
+const pluginImport = require('eslint-plugin-import-x');
 const pluginJsonc = require('eslint-plugin-jsonc');
 const pluginMarkdown = require('eslint-plugin-markdown');
-const jsoncParser = require('jsonc-eslint-parser');
-const pluginImport = require('eslint-plugin-import-x');
-const html = require('eslint-plugin-html');
 const globals = require('globals');
+const jsoncParser = require('jsonc-eslint-parser');
 
 module.exports = [
   ...pluginMarkdown.configs.recommended,

@@ -12,7 +12,7 @@ module.exports = {
   // 引用对象中的属性时更改是否添加引号
   quoteProps: 'as-needed',
   // 是否缩进Vue 文件中的代码<script>和<style>标签
-  vueIndentScriptAndStyle: true,
+  vueIndentScriptAndStyle: false,
   // jsx中使用单引号）
   jsxSingleQuote: false,
   // 在对象或数组最后一个元素后面是否加逗号

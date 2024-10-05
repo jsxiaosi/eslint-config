@@ -1,4 +1,7 @@
-# @jsxiaosi/eslint-config-uni-app
+# @jsxiaosi/eslint-config-uni-app（弃用）
+
+> [!CAUTION]
+>  @jsxiaosi/eslint-config-uni-app 已经被弃用，请使用[@jsxiaosi/eslint-config](https://github.com/jsxiaosi/eslint-config/tree/main/packages/eslint)
 
 - 合理的默认配置
 - 无需配合Prettier也能自动修复格式化

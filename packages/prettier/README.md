@@ -1,4 +1,7 @@
-# @jsxiaosi/eslint-config-prettier
+# @jsxiaosi/eslint-config-prettier （弃用）
+
+> [!CAUTION]
+>  @jsxiaosi/eslint-config-prettier 已经被弃用，请使用[@jsxiaosi/eslint-config](https://github.com/jsxiaosi/eslint-config/tree/main/packages/eslint)
 
 - 合理的默认配置
 - 支持Vue，支持Typescript，Jsx格式化

@@ -1,19 +1,3 @@
-import baseConfig from '@jsxiaosi/eslint-config-base';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
+import jsxiaosi from '@jsxiaosi/eslint-config';
 
-export default [
-  ...baseConfig,
-  {
-    plugins: {
-      prettier: eslintPluginPrettier,
-    },
-    rules: {
-      'prettier/prettier': [
-        'error',
-        {
-          usePrettierrc: true,
-        },
-      ],
-    },
-  },
-];
+export default jsxiaosi();
