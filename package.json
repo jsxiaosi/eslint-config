@@ -28,7 +28,9 @@
     "cz": "czg",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
     "build": "pnpm run -C packages/eslint build",
-    "typegen": "pnpm run -C packages/eslint typegen"
+    "typegen": "pnpm run -C packages/eslint typegen",
+    "prepublishOnly": "pnpm run -C packages/eslint build",
+    "postinstall": "pnpm run -C packages/eslint typegen"
   },
   "dependencies": {
     "@jsxiaosi/commitlint-config": "workspace:*",
