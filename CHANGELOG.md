@@ -1,11 +1,21 @@
+## <small>1.0.2 (2024-10-10)</small>
+
+* refactor(commitlint): ♻️ 重构ts ([c019e41](https://github.com/jsxiaosi/eslint-config/commit/c019e41))
+* fix(eslint): 🐛 package ([b0956a1](https://github.com/jsxiaosi/eslint-config/commit/b0956a1))
+* feat(eslint): ✨ package ([3a7b1b1](https://github.com/jsxiaosi/eslint-config/commit/3a7b1b1))
+* feat(eslint): ✨ package ([8d35732](https://github.com/jsxiaosi/eslint-config/commit/8d35732))
+
+
+
 ## 0.1.0 (2024-07-18)
 
-* build(commitlint,prettier,react,typescript,vue): 📦️ 依赖 ([6d76283](https://github.com/jsxiaosi/eslint-config/commit/6d76283))
-* feat(commitlint,base,prettier,react,typescript,uni-app,vue): ✨ markdown ([4918c88](https://github.com/jsxiaosi/eslint-config/commit/4918c88))
-* feat(commitlint,prettier,react,typescript,vue): ✨ v0.0.21 ([a1079e0](https://github.com/jsxiaosi/eslint-config/commit/a1079e0))
+* feat: ✨ version ([c23a320](https://github.com/jsxiaosi/eslint-config/commit/c23a320))
 * feat: ✨ version ([f9d39c7](https://github.com/jsxiaosi/eslint-config/commit/f9d39c7))
 * feat(lint): ✨ eslint ([168d438](https://github.com/jsxiaosi/eslint-config/commit/168d438))
 * feat(uni-app): ✨ uni-app ([a3098ad](https://github.com/jsxiaosi/eslint-config/commit/a3098ad))
+* build(commitlint,prettier,react,typescript,vue): 📦️ 依赖 ([6d76283](https://github.com/jsxiaosi/eslint-config/commit/6d76283))
+* feat(commitlint,base,prettier,react,typescript,uni-app,vue): ✨ markdown ([4918c88](https://github.com/jsxiaosi/eslint-config/commit/4918c88))
+* feat(commitlint,prettier,react,typescript,vue): ✨ v0.0.21 ([a1079e0](https://github.com/jsxiaosi/eslint-config/commit/a1079e0))
 * fix(vue): 🐛 dependencies ([861d0c2](https://github.com/jsxiaosi/eslint-config/commit/861d0c2))
 * build(commitlint): 📦️ commitlint ([5fce026](https://github.com/jsxiaosi/eslint-config/commit/5fce026))
 * build(commitlint): 📦️ commitlint ([8858f03](https://github.com/jsxiaosi/eslint-config/commit/8858f03))
