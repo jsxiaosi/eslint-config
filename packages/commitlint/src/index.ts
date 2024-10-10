@@ -1,67 +1,55 @@
-// .commitlintrc.js
-// const fs = require('fs');
-// const path = require('path');
-// const { execSync } = require('child_process');
+import { RuleConfigSeverity } from '@commitlint/types';
 
-// const scopes = fs.readdirSync(path.resolve(__dirname, 'page'))
+import type { UserConfig } from 'czg';
 
-// const gitStatus = execSync('git status --porcelain || true')
-//   .toString()
-//   .trim()
-//   .split('\n')
-
-// const scopeComplete = gitStatus
-//   .find((r) => ~r.indexOf('M  page'))
-//   ?.replace(/(\/)/g, '%%')
-//   ?.match(/page%%((\w|-)*)/)?.[1];
-
-// const subjectComplete = gitStatus
-//   .find((r) => ~r.indexOf('M  page'))
-//   ?.replace(/\//g, '%%')
-//   ?.match(/page%%((\w|-)*)/)?.[1]
-
-/** @type {import('cz-git').UserConfig} */
-
-module.exports = {
+export const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
     // 正文空行开头
-    'body-leading-blank': [1, 'always'],
+    'body-leading-blank': [RuleConfigSeverity.Warning, 'always'],
     // 页脚空行开头
-    'footer-leading-blank': [1, 'always'],
+    'footer-leading-blank': [RuleConfigSeverity.Warning, 'always'],
     // 文本长度
-    'header-max-length': [2, 'always', 100],
+    'header-max-length': [RuleConfigSeverity.Error, 'always', 100],
     /**
      * scope：提交范围
      * feat(scope): feat add .....
      *      ^^^^^
      */
     // scope：单词格式
-    'scope-case': [2, 'always', ['lower-case', 'upper-case', 'start-case', 'pascal-case']],
+    'scope-case': [
+      RuleConfigSeverity.Error,
+      'always',
+      ['lower-case', 'upper-case', 'start-case', 'pascal-case'],
+    ],
     /**
      * subject：commit 描述
      * feat(scope): feat add .....
      *              ^^^^^^^^^^^^^^
      */
     // subject：单词格式
-    'subject-case': [1, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
+    'subject-case': [
+      RuleConfigSeverity.Warning,
+      'never',
+      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
+    ],
     // subject：是否为空
-    'subject-empty': [2, 'never'],
+    'subject-empty': [RuleConfigSeverity.Error, 'never'],
     // subject：终止符
-    'subject-full-stop': [2, 'never', '.'],
+    'subject-full-stop': [RuleConfigSeverity.Error, 'never', '.'],
     /**
      * type：commit 类型
      * feat(scope): feat add .....
      * ^^^^
      */
     // type：单词格式
-    'type-case': [2, 'always', 'lower-case'],
+    'type-case': [RuleConfigSeverity.Error, 'always', 'lower-case'],
     // type：是否为空
-    'type-empty': [2, 'never'],
+    'type-empty': [RuleConfigSeverity.Error, 'never'],
     // type：可选值
     'type-enum': [
-      2,
+      RuleConfigSeverity.Error,
       'always',
       [
         'feat',
@@ -141,3 +129,5 @@ module.exports = {
     // defaultSubject: subjectComplete && `[${subjectComplete}] `,
   },
 };
+
+export default Configuration;

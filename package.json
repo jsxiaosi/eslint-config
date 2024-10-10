@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/linting-configs",
   "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "description": "eslint 配置",
   "publishConfig": {
@@ -27,27 +27,26 @@
     "prepare": "husky",
     "cz": "czg",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
-    "build": "pnpm run -C packages/eslint build",
+    "build:eslint": "pnpm run -C packages/eslint build",
+    "build:commitlint": "pnpm run -C packages/commitlint build",
     "typegen": "pnpm run -C packages/eslint typegen",
-    "prepublishOnly": "pnpm run -C packages/eslint build",
+    "prepublishOnly": "npm run build:eslint && npm run build:commitlint",
     "postinstall": "pnpm run -C packages/eslint typegen"
   },
   "dependencies": {
     "@jsxiaosi/commitlint-config": "workspace:*",
     "@jsxiaosi/eslint-config": "workspace:*",
-    "@jsxiaosi/eslint-config-base": "workspace:*",
-    "@jsxiaosi/eslint-config-prettier": "workspace:*",
-    "globals": "^15.8.0"
+    "globals": "^15.11.0"
   },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@types/node": "^22.5.4",
-    "commitlint": "^19.3.0",
+    "@types/node": "^22.7.5",
+    "commitlint": "^19.5.0",
     "conventional-changelog-cli": "^5.0.0",
-    "czg": "^1.9.3",
-    "eslint": "^9.10.0",
-    "husky": "^9.0.11",
-    "typescript": "^5.5.3"
+    "czg": "^1.10.1",
+    "eslint": "^9.12.0",
+    "husky": "^9.1.6",
+    "typescript": "^5.5.4"
   },
   "config": {
     "commitizen": {
