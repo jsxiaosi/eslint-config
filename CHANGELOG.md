@@ -1,7 +1,11 @@
-## <small>1.0.2 (2024-10-10)</small>
+## <small>1.0.2 (2024-10-17)</small>
 
-* refactor(commitlint): ♻️ 重构ts ([c019e41](https://github.com/jsxiaosi/eslint-config/commit/c019e41))
 * fix(eslint): 🐛 package ([b0956a1](https://github.com/jsxiaosi/eslint-config/commit/b0956a1))
+* fix(eslint): 🐛 typescript ([c34cb7b](https://github.com/jsxiaosi/eslint-config/commit/c34cb7b))
+* fix(package): 🐛 resolutions ([1a4580d](https://github.com/jsxiaosi/eslint-config/commit/1a4580d))
+* refactor: ♻️ 删除弃用库 ([2391c2e](https://github.com/jsxiaosi/eslint-config/commit/2391c2e))
+* refactor(commitlint): ♻️ 重构ts ([c019e41](https://github.com/jsxiaosi/eslint-config/commit/c019e41))
+* feat(commitlint,eslint): ✨ version ([a757fc0](https://github.com/jsxiaosi/eslint-config/commit/a757fc0))
 * feat(eslint): ✨ package ([3a7b1b1](https://github.com/jsxiaosi/eslint-config/commit/3a7b1b1))
 * feat(eslint): ✨ package ([8d35732](https://github.com/jsxiaosi/eslint-config/commit/8d35732))
 
@@ -62,10 +66,10 @@
 * build: 📦️ 删除多余依赖 ([6f6af12](https://github.com/jsxiaosi/eslint-config/commit/6f6af12))
 * feat: ✨ add commlint ([67f4467](https://github.com/jsxiaosi/eslint-config/commit/67f4467))
 * feat(commitlint): ✨ add commitlint config ([05e2ba8](https://github.com/jsxiaosi/eslint-config/commit/05e2ba8))
+* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * feature: add eslint base ts vue ([1923799](https://github.com/jsxiaosi/eslint-config/commit/1923799))
 * feature: add eslint-config project ([b7f785c](https://github.com/jsxiaosi/eslint-config/commit/b7f785c))
 * feature: improt  promise ([c5a3243](https://github.com/jsxiaosi/eslint-config/commit/c5a3243))
-* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * chore: 0.0.6 ([3782e7c](https://github.com/jsxiaosi/eslint-config/commit/3782e7c))
 * chore: delete promise eslint ([25b39ba](https://github.com/jsxiaosi/eslint-config/commit/25b39ba))
 * fixbug: base version 0.0.1 ([40703b4](https://github.com/jsxiaosi/eslint-config/commit/40703b4))

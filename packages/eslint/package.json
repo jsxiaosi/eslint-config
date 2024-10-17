@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/eslint-config",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -26,6 +26,7 @@
   },
   "scripts": {
     "build": "npm run typegen && tsup --format esm,cjs",
+    "release": "bump package.json",
     "typegen": "tsx scripts/typegen.ts",
     "lint": "eslint . --config=index.js"
   },

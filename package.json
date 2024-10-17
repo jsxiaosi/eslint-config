@@ -23,6 +23,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
+    "release:eslint": "pnpm run -C packages/eslint release",
     "lint:eslint": "eslint . --fix  --flag unstable_ts_config ",
     "prepare": "husky",
     "cz": "czg",
