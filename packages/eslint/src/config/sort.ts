@@ -1,4 +1,4 @@
-import type { TypedFlatConfigItem } from '../types'
+import type { TypedFlatConfigItem } from '../types';
 
 /**
  * Sort package.json
@@ -78,12 +78,7 @@ export async function sortPackageJson(): Promise<TypedFlatConfigItem[]> {
             pathPattern: '^(?:resolutions|overrides|pnpm.overrides)$',
           },
           {
-            order: [
-              'types',
-              'import',
-              'require',
-              'default',
-            ],
+            order: ['types', 'import', 'require', 'default'],
             pathPattern: '^exports.*$',
           },
           {
@@ -105,7 +100,7 @@ export async function sortPackageJson(): Promise<TypedFlatConfigItem[]> {
         ],
       },
     },
-  ]
+  ];
 }
 /**
  * Sort tsconfig.json
@@ -122,14 +117,7 @@ export function sortTsconfig(): TypedFlatConfigItem[] {
         'jsonc/sort-keys': [
           'error',
           {
-            order: [
-              'extends',
-              'compilerOptions',
-              'references',
-              'files',
-              'include',
-              'exclude',
-            ],
+            order: ['extends', 'compilerOptions', 'references', 'files', 'include', 'exclude'],
             pathPattern: '^$',
           },
           {
@@ -237,5 +225,5 @@ export function sortTsconfig(): TypedFlatConfigItem[] {
         ],
       },
     },
-  ]
+  ];
 }

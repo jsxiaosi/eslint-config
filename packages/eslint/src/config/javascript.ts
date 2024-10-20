@@ -1,4 +1,4 @@
-import globals from "globals";
+import globals from 'globals';
 import type { OptionsOverrides, TypedFlatConfigItem } from '../types';
 
 export async function javascript(option: OptionsOverrides = {}): Promise<TypedFlatConfigItem[]> {

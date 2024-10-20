@@ -18,22 +18,14 @@ export const Configuration: UserConfig = {
      *      ^^^^^
      */
     // scope：单词格式
-    'scope-case': [
-      RuleConfigSeverity.Error,
-      'always',
-      ['lower-case', 'upper-case', 'start-case', 'pascal-case'],
-    ],
+    'scope-case': [RuleConfigSeverity.Error, 'always', ['lower-case', 'upper-case', 'start-case', 'pascal-case']],
     /**
      * subject：commit 描述
      * feat(scope): feat add .....
      *              ^^^^^^^^^^^^^^
      */
     // subject：单词格式
-    'subject-case': [
-      RuleConfigSeverity.Warning,
-      'never',
-      ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
-    ],
+    'subject-case': [RuleConfigSeverity.Warning, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
     // subject：是否为空
     'subject-empty': [RuleConfigSeverity.Error, 'never'],
     // subject：终止符
@@ -51,21 +43,7 @@ export const Configuration: UserConfig = {
     'type-enum': [
       RuleConfigSeverity.Error,
       'always',
-      [
-        'feat',
-        'fix',
-        'docs',
-        'style',
-        'refactor',
-        'perf',
-        'test',
-        'build',
-        'ci',
-        'revert',
-        'chore',
-        'wip',
-        'types',
-      ],
+      ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci', 'revert', 'chore', 'wip', 'types'],
     ],
   },
   prompt: {

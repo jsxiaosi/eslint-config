@@ -23,13 +23,13 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
+    "@commitlint/cli": ">=19.5.0",
     "commitlint": ">=19.5.0",
     "czg": ">=1.10.0",
     "husky": ">=8.0.0"
   },
   "dependencies": {
     "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
     "commitizen": "^4.3.1"
   },
   "devDependencies": {

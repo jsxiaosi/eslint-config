@@ -17,7 +17,6 @@ pnpm add -D @jsxiaosi/eslint-config eslint
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi();
-
 ```
 
 ## 添加命令
@@ -62,8 +61,8 @@ export default jsxiaosi({
   ignores: [
     '**/fixtures',
     // ...globs
-  ]
-})
+  ],
+});
 ```
 
 ```javascript
@@ -84,31 +83,29 @@ export default jsxiaosi(
   {
     rules: {},
   },
-)
+);
 ```
 
 ## 插件重命名
 
-| New Prefix | Original Prefix        | Source Plugin                                                                              |
-| ---------- | ---------------------- | ------------------------------------------------------------------------------------------ |
-| `ts/*`     | `@typescript-eslint/*` | [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint) |
-
+| New Prefix | Original Prefix | Source Plugin |
+| --- | --- | --- |
+| `ts/*` | `@typescript-eslint/*` | [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint) |
 
 自定义前缀
 
 ```javascript
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
-export default jsxiaosi()
-  .renamePlugins({
-    /**
-     * {
-     *    oldPrefix: newPrefix
-     * }
-     */
-    ts: '@typescript-eslint',
-    // ...
-  })
+export default jsxiaosi().renamePlugins({
+  /**
+   * {
+   *    oldPrefix: newPrefix
+   * }
+   */
+  ts: '@typescript-eslint',
+  // ...
+});
 ```
 
 ## 覆盖规则
@@ -122,7 +119,7 @@ import jsxiaosi from '@jsxiaosi/eslint-config';
 export default jsxiaosi(
   {
     vue: true,
-    typescript: true
+    typescript: true,
   },
   {
     // 请记住在此处指定文件 glob，否则可能会导致 vue 插件处理非 vue 文件
@@ -136,8 +133,8 @@ export default jsxiaosi(
     rules: {
       'style/semi': ['error', 'never'],
     },
-  }
-)
+  },
+);
 ```
 
 每个配置中集成了`overrides`方便覆盖规则
@@ -162,9 +159,8 @@ export default jsxiaosi({
       // ...
     },
   },
-})
+});
 ```
-
 
 ## 配置
 
@@ -177,8 +173,8 @@ export default jsxiaosi({
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
-  vue: true
-})
+  vue: true,
+});
 ```
 
 Vue2
@@ -191,28 +187,30 @@ import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
   vue: {
-    vueVersion: 2
-  }
-})
+    vueVersion: 2,
+  },
+});
 ```
 
 运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
+
 ```base
 pnpm -D eslint-plugin-vue vue-eslint-parser
 ```
 
-### React 
+### React
 
 ```javascript
 // eslint.config.js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
-  react: true
-})
+  react: true,
+});
 ```
 
 运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
+
 ```base
 pnpm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh
 ```
@@ -230,12 +228,12 @@ export default jsxiaosi({
    *    usePrettierrc: false  是否使用项目中的 prettier 文件配置
    *  }
    */
-  prettier: true
-
-})
+  prettier: true,
+});
 ```
 
 运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
+
 ```base
 pnpm i -D eslint-plugin-prettier prettier
 ```

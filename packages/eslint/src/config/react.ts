@@ -1,66 +1,43 @@
-import { isPackageExists } from 'local-pkg'
+import { isPackageExists } from 'local-pkg';
 
-import { GLOB_SRC } from '../globs'
-import { ensurePackages, interopDefault } from '../utils'
+import { GLOB_SRC } from '../globs';
+import { ensurePackages, interopDefault } from '../utils';
 
-import type { OptionsFiles, OptionsOverrides, OptionsTypeScriptWithTypes, TypedFlatConfigItem } from '../types'
+import type { OptionsFiles, OptionsOverrides, OptionsTypeScriptWithTypes, TypedFlatConfigItem } from '../types';
 
 // react refresh
-const ReactRefreshAllowConstantExportPackages = [
-  'vite',
-]
-const RemixPackages = [
-  '@remix-run/node',
-  '@remix-run/react',
-  '@remix-run/serve',
-  '@remix-run/dev',
-]
-const NextJsPackages = [
-  'next',
-]
+const ReactRefreshAllowConstantExportPackages = ['vite'];
+const RemixPackages = ['@remix-run/node', '@remix-run/react', '@remix-run/serve', '@remix-run/dev'];
+const NextJsPackages = ['next'];
 
 export async function react(
   options: OptionsTypeScriptWithTypes & OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
-  const {
-    files = [GLOB_SRC],
-    overrides = {},
-  } = options
+  const { files = [GLOB_SRC], overrides = {} } = options;
 
-  await ensurePackages([
-    '@eslint-react/eslint-plugin',
-    'eslint-plugin-react-hooks',
-    'eslint-plugin-react-refresh',
-  ])
+  await ensurePackages(['@eslint-react/eslint-plugin', 'eslint-plugin-react-hooks', 'eslint-plugin-react-refresh']);
 
-  const tsconfigPath = options?.tsconfigPath
-    ? [options.tsconfigPath]
-    : undefined
-  const isTypeAware = !!tsconfigPath
+  const tsconfigPath = options?.tsconfigPath ? [options.tsconfigPath] : undefined;
+  const isTypeAware = !!tsconfigPath;
 
-  const [
-    pluginReact,
-    pluginReactHooks,
-    pluginReactRefresh,
-    parserTs,
-  ] = await Promise.all([
+  const [pluginReact, pluginReactHooks, pluginReactRefresh, parserTs] = await Promise.all([
     interopDefault(import('@eslint-react/eslint-plugin')),
     interopDefault(import('eslint-plugin-react-hooks')),
     interopDefault(import('eslint-plugin-react-refresh')),
     interopDefault(import('@typescript-eslint/parser')),
-  ] as const)
+  ] as const);
 
-  const isAllowConstantExport = ReactRefreshAllowConstantExportPackages.some(i => isPackageExists(i))
-  const isUsingRemix = RemixPackages.some(i => isPackageExists(i))
-  const isUsingNext = NextJsPackages.some(i => isPackageExists(i))
+  const isAllowConstantExport = ReactRefreshAllowConstantExportPackages.some(i => isPackageExists(i));
+  const isUsingRemix = RemixPackages.some(i => isPackageExists(i));
+  const isUsingNext = NextJsPackages.some(i => isPackageExists(i));
 
-  const plugins = pluginReact.configs.all.plugins
+  const plugins = pluginReact.configs.all.plugins;
 
   return [
     {
       name: 'jsxiaosi/react/setup',
       plugins: {
-        'react': plugins['@eslint-react'],
+        react: plugins['@eslint-react'],
         'react-dom': plugins['@eslint-react/dom'],
         'react-hooks': pluginReactHooks,
         'react-hooks-extra': plugins['@eslint-react/hooks-extra'],
@@ -76,7 +53,7 @@ export async function react(
           ecmaFeatures: {
             jsx: true,
           },
-          ...isTypeAware ? { project: tsconfigPath } : {},
+          ...(isTypeAware ? { project: tsconfigPath } : {}),
         },
         sourceType: 'module',
       },
@@ -106,24 +83,9 @@ export async function react(
             allowConstantExport: isAllowConstantExport,
             allowExportNames: [
               ...(isUsingNext
-                ? [
-                    'config',
-                    'generateStaticParams',
-                    'metadata',
-                    'generateMetadata',
-                    'viewport',
-                    'generateViewport',
-                  ]
+                ? ['config', 'generateStaticParams', 'metadata', 'generateMetadata', 'viewport', 'generateViewport']
                 : []),
-              ...(isUsingRemix
-                ? [
-                    'meta',
-                    'links',
-                    'headers',
-                    'loader',
-                    'action',
-                  ]
-                : []),
+              ...(isUsingRemix ? ['meta', 'links', 'headers', 'loader', 'action'] : []),
             ],
           },
         ],
@@ -166,15 +128,15 @@ export async function react(
         'react/prefer-shorthand-boolean': 'warn',
         'react/prefer-shorthand-fragment': 'warn',
 
-        ...isTypeAware
+        ...(isTypeAware
           ? {
               'react/no-leaked-conditional-rendering': 'warn',
             }
-          : {},
+          : {}),
 
         // overrides
         ...overrides,
       },
     },
-  ]
+  ];
 }

@@ -11,11 +11,7 @@ import type {
 } from '../types';
 
 export async function vue(
-  options: OptionsVue &
-    OptionsHasTypeScript &
-    OptionsHasPrettier &
-    OptionsOverrides &
-    OptionsFiles = {},
+  options: OptionsVue & OptionsHasTypeScript & OptionsHasPrettier & OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
   const { files = [GLOB_VUE], overrides = {}, vueVersion = 3 } = options;
 
@@ -63,9 +59,7 @@ export async function vue(
             jsx: true,
           },
           extraFileExtensions: ['.vue'],
-          parser: options.typescript
-            ? ((await interopDefault(import('@typescript-eslint/parser'))) as any)
-            : null,
+          parser: options.typescript ? ((await interopDefault(import('@typescript-eslint/parser'))) as any) : null,
           sourceType: 'module',
         },
       },
@@ -116,12 +110,7 @@ export async function vue(
         'vue/no-empty-pattern': 'error',
         'vue/no-irregular-whitespace': 'error',
         'vue/no-loss-of-precision': 'error',
-        'vue/no-restricted-syntax': [
-          'error',
-          'DebuggerStatement',
-          'LabeledStatement',
-          'WithStatement',
-        ],
+        'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
         'vue/no-restricted-v-bind': ['error', '/^v-/'],
         'vue/no-setup-props-reactivity-loss': 'off',
         'vue/no-sparse-arrays': 'error',

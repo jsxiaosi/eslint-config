@@ -23,14 +23,9 @@ import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types';
 
 export function jsxiaosi(
   options: OptionsConfig & Omit<TypedFlatConfigItem, 'files'> = {},
-  ...userConfigs: Awaitable<
-    | TypedFlatConfigItem
-    | TypedFlatConfigItem[]
-    | Linter.Config[]
-  >[]
+  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
-  const { componentExts = [], typescript: enableTypeScript = isPackageExists('typescript') } =
-    options;
+  const { componentExts = [], typescript: enableTypeScript = isPackageExists('typescript') } = options;
 
   const typescriptOptions = resolveSubOptions(options, 'typescript');
 
@@ -85,8 +80,7 @@ export function jsxiaosi(
     configs.push(
       react({
         ...resolveSubOptions(options, 'react'),
-        tsconfigPath:
-          'tsconfigPath' in typescriptOptions ? typescriptOptions.tsconfigPath : undefined,
+        tsconfigPath: 'tsconfigPath' in typescriptOptions ? typescriptOptions.tsconfigPath : undefined,
       }),
     );
   }

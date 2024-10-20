@@ -3,12 +3,9 @@ import type { OptionsPrettier, TypedFlatConfigItem } from '../types';
 import type { PrettierOptions } from '../vender/prettier-types';
 
 export async function prettier(options: OptionsPrettier = {}): Promise<TypedFlatConfigItem[]> {
-
   await ensurePackages(['eslint-plugin-prettier', 'prettier']);
 
-  const [pluginPrettier] = await Promise.all([
-    interopDefault(import('eslint-plugin-prettier')),
-  ] as const);
+  const [pluginPrettier] = await Promise.all([interopDefault(import('eslint-plugin-prettier'))] as const);
 
   const { usePrettierrc = false } = options;
 
@@ -54,7 +51,7 @@ export async function prettier(options: OptionsPrettier = {}): Promise<TypedFlat
       rules: {
         'prettier/prettier': [
           'error',
-          { ...prettierOptions },
+          !usePrettierrc ? { ...prettierOptions } : {},
           {
             usePrettierrc,
           },

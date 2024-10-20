@@ -1,19 +1,15 @@
-import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE, GLOB_MARKDOWN_IN_MARKDOWN } from '../globs'
-import { interopDefault } from '../utils'
+import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE, GLOB_MARKDOWN_IN_MARKDOWN } from '../globs';
+import { interopDefault } from '../utils';
 
-import type { OptionsComponentExts, OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types'
+import type { OptionsComponentExts, OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types';
 
 export async function markdown(
   options: OptionsFiles & OptionsComponentExts & OptionsOverrides = {},
 ): Promise<TypedFlatConfigItem[]> {
-  const {
-    componentExts = [],
-    files = [GLOB_MARKDOWN],
-    overrides = {},
-  } = options
+  const { componentExts = [], files = [GLOB_MARKDOWN], overrides = {} } = options;
 
   // @ts-expect-error missing types
-  const pluginMarkdown = await interopDefault(import('eslint-plugin-markdown'))
+  const pluginMarkdown = await interopDefault(import('eslint-plugin-markdown'));
 
   return [
     {
@@ -26,13 +22,10 @@ export async function markdown(
       files,
       ignores: [GLOB_MARKDOWN_IN_MARKDOWN],
       name: 'jsxiaosi/markdown/processor',
-      processor:  pluginMarkdown.processors.markdown,
+      processor: pluginMarkdown.processors.markdown,
     },
     {
-      files: [
-        GLOB_MARKDOWN_CODE,
-        ...componentExts.map(ext => `${GLOB_MARKDOWN}/**/*.${ext}`),
-      ],
+      files: [GLOB_MARKDOWN_CODE, ...componentExts.map(ext => `${GLOB_MARKDOWN}/**/*.${ext}`)],
       languageOptions: {
         parserOptions: {
           ecmaFeatures: {
@@ -74,5 +67,5 @@ export async function markdown(
         ...overrides,
       },
     },
-  ]
+  ];
 }

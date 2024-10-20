@@ -21,15 +21,9 @@ export async function typescript(
     OptionsTypeScriptParserOptions &
     OptionsProjectType = {},
 ): Promise<TypedFlatConfigItem[]> {
-  const {
-    componentExts = [],
-    overrides = {},
-    overridesTypeAware = {},
-    parserOptions = {},
-    type = 'app',
-  } = options;
+  const { componentExts = [], overrides = {}, overridesTypeAware = {}, parserOptions = {}, type = 'app' } = options;
 
-  const files = options.files ?? [GLOB_TS, GLOB_TSX, ...componentExts.map((ext) => `**/*.${ext}`)];
+  const files = options.files ?? [GLOB_TS, GLOB_TSX, ...componentExts.map(ext => `**/*.${ext}`)];
 
   const filesTypeAware = options.filesTypeAware ?? [GLOB_TS, GLOB_TSX];
   const ignoresTypeAware = options.ignoresTypeAware ?? [`${GLOB_MARKDOWN}/**`, GLOB_ASTRO_TS];
@@ -55,10 +49,7 @@ export async function typescript(
     'ts/restrict-plus-operands': 'error',
     'ts/restrict-template-expressions': 'error',
     'ts/return-await': ['error', 'in-try-catch'],
-    'ts/strict-boolean-expressions': [
-      'error',
-      { allowNullableBoolean: true, allowNullableObject: true },
-    ],
+    'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: true, allowNullableObject: true }],
     'ts/switch-exhaustiveness-check': 'error',
     'ts/unbound-method': 'error',
   };
@@ -68,18 +59,14 @@ export async function typescript(
     interopDefault(import('@typescript-eslint/parser')),
   ] as const);
 
-  function makeParser(
-    typeAware: boolean,
-    files: string[],
-    ignores?: string[],
-  ): TypedFlatConfigItem {
+  function makeParser(typeAware: boolean, files: string[], ignores?: string[]): TypedFlatConfigItem {
     return {
       files,
       ...(ignores ? { ignores } : {}),
       languageOptions: {
         parser: parserTs,
         parserOptions: {
-          extraFileExtensions: componentExts.map((ext) => `.${ext}`),
+          extraFileExtensions: componentExts.map(ext => `.${ext}`),
           sourceType: 'module',
           ...(typeAware
             ? {
@@ -147,13 +134,13 @@ export async function typescript(
         'ts/no-unused-vars': [
           'error',
           {
-            "args": "all",
-            "argsIgnorePattern": "^_",
-            "caughtErrors": "all",
-            "caughtErrorsIgnorePattern": "^_",
-            "destructuredArrayIgnorePattern": "^_",
-            "varsIgnorePattern": "^_",
-            "ignoreRestSiblings": true    
+            args: 'all',
+            argsIgnorePattern: '^_',
+            caughtErrors: 'all',
+            caughtErrorsIgnorePattern: '^_',
+            destructuredArrayIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
           },
         ],
         'ts/no-use-before-define': ['error', { classes: false, functions: false, variables: true }],

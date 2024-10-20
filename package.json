@@ -24,20 +24,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
     "release:eslint": "pnpm run -C packages/eslint release",
-    "lint:eslint": "eslint . --fix  --flag unstable_ts_config ",
+    "lint:eslint": "eslint . --fix ",
+    "lint:prettier": "prettier . --write",
     "prepare": "husky",
     "cz": "czg",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
     "build:eslint": "pnpm run -C packages/eslint build",
+    "build:perttier": "pnpm run -C packages/prettier build",
     "build:commitlint": "pnpm run -C packages/commitlint build",
     "typegen": "pnpm run -C packages/eslint typegen",
     "tag": "npm run release && npm run log",
     "prepublishOnly": "npm run build:eslint && npm run build:commitlint",
-    "postinstall": "pnpm run -C packages/eslint typegen"
+    "postinstall": "npm run build:eslint && npm run build:commitlint && npm run build:perttier"
   },
   "dependencies": {
     "@jsxiaosi/commitlint-config": "workspace:*",
     "@jsxiaosi/eslint-config": "workspace:*",
+    "@jsxiaosi/eslint-config-prettier": "workspace:*",
     "globals": "^15.11.0"
   },
   "devDependencies": {
@@ -48,6 +51,8 @@
     "czg": "^1.10.1",
     "eslint": "^9.12.0",
     "husky": "^9.1.6",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
   "resolutions": {
