@@ -51,7 +51,7 @@ export async function prettier(options: OptionsPrettier = {}): Promise<TypedFlat
       rules: {
         'prettier/prettier': [
           'error',
-          !usePrettierrc ? { ...prettierOptions } : {},
+          !usePrettierrc ? { ...prettierOptions } : { ...options.prettierOptions },
           {
             usePrettierrc,
           },

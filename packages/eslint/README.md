@@ -222,12 +222,6 @@ pnpm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-re
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
-  /**
-   *  prettier:{
-   *    prettierOptions: {}  prettier 配置
-   *    usePrettierrc: false  是否使用项目中的 prettier 文件配置
-   *  }
-   */
   prettier: true,
 });
 ```
@@ -237,3 +231,17 @@ export default jsxiaosi({
 ```base
 pnpm i -D eslint-plugin-prettier prettier
 ```
+
+使用外部`Prettier`配置文件
+
+``` javascript
+import jsxiaosi from '@jsxiaosi/eslint-config';
+
+export default jsxiaosi({
+   prettier:{
+     usePrettierrc: true
+    }
+});
+```
+
+同时也提供了`Prettier`外部文件的配置 [@jsxiaosi/eslint-config-prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier)
