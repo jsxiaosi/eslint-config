@@ -1,5 +1,19 @@
+## <small>1.0.5 (2024-10-22)</small>
+
+* perf(eslint): ⚡️ prettier ([6da636f](https://github.com/jsxiaosi/eslint-config/commit/6da636f))
+* fix(commitlint): 🐛 package ([15f9d4e](https://github.com/jsxiaosi/eslint-config/commit/15f9d4e))
+
+
+
+## <small>1.0.4 (2024-10-20)</small>
+
+* feat(commitlint,eslint,prettier): ✨ v1.0.4 ([46de229](https://github.com/jsxiaosi/eslint-config/commit/46de229))
+
+
+
 ## <small>1.0.3 (2024-10-20)</small>
 
+* feat(commitlint,eslint,prettier): ✨ v1.0.3 ([7ce039c](https://github.com/jsxiaosi/eslint-config/commit/7ce039c))
 * feat(commitlint,eslint): ✨ version ([a757fc0](https://github.com/jsxiaosi/eslint-config/commit/a757fc0))
 * feat(eslint,commitlint,prettier): ✨ style ([465b84f](https://github.com/jsxiaosi/eslint-config/commit/465b84f))
 * feat(eslint): ✨ 1.0.3 ([05746b4](https://github.com/jsxiaosi/eslint-config/commit/05746b4))
