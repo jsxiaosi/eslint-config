@@ -1,5 +1,12 @@
+## <small>1.0.6 (2024-11-08)</small>
+
+* fix(eslint): 🐛 peerDependencies eslint 依赖约束 ([641b42b](https://github.com/jsxiaosi/eslint-config/commit/641b42b))
+
+
+
 ## <small>1.0.5 (2024-10-22)</small>
 
+* feat(commitlint,eslint,prettier): ✨ v1.0.5 ([8c17100](https://github.com/jsxiaosi/eslint-config/commit/8c17100))
 * perf(eslint): ⚡️ prettier ([6da636f](https://github.com/jsxiaosi/eslint-config/commit/6da636f))
 * fix(commitlint): 🐛 package ([15f9d4e](https://github.com/jsxiaosi/eslint-config/commit/15f9d4e))
 
@@ -82,10 +89,10 @@
 * build: 📦️ 删除多余依赖 ([6f6af12](https://github.com/jsxiaosi/eslint-config/commit/6f6af12))
 * feat: ✨ add commlint ([67f4467](https://github.com/jsxiaosi/eslint-config/commit/67f4467))
 * feat(commitlint): ✨ add commitlint config ([05e2ba8](https://github.com/jsxiaosi/eslint-config/commit/05e2ba8))
+* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * feature: add eslint base ts vue ([1923799](https://github.com/jsxiaosi/eslint-config/commit/1923799))
 * feature: add eslint-config project ([b7f785c](https://github.com/jsxiaosi/eslint-config/commit/b7f785c))
 * feature: improt  promise ([c5a3243](https://github.com/jsxiaosi/eslint-config/commit/c5a3243))
-* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * chore: 0.0.6 ([3782e7c](https://github.com/jsxiaosi/eslint-config/commit/3782e7c))
 * chore: delete promise eslint ([25b39ba](https://github.com/jsxiaosi/eslint-config/commit/25b39ba))
 * fixbug: base version 0.0.1 ([40703b4](https://github.com/jsxiaosi/eslint-config/commit/40703b4))
