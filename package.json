@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/linting-configs",
   "type": "module",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": true,
   "description": "eslint 配置",
   "publishConfig": {
@@ -42,22 +42,22 @@
     "@jsxiaosi/commitlint-config": "workspace:*",
     "@jsxiaosi/eslint-config": "workspace:*",
     "@jsxiaosi/eslint-config-prettier": "workspace:*",
-    "globals": "^15.11.0"
+    "globals": "^15.13.0"
   },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@types/node": "^22.7.5",
-    "commitlint": "^19.5.0",
+    "@types/node": "^22.10.2",
+    "commitlint": "^19.6.0",
     "conventional-changelog-cli": "^5.0.0",
-    "czg": "^1.10.1",
-    "eslint": "^9.12.0",
-    "husky": "^9.1.6",
-    "prettier": "^3.3.3",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "czg": "^1.11.0",
+    "eslint": "^*",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
   },
   "resolutions": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "config": {
     "commitizen": {
