@@ -1,5 +1,9 @@
-## <small>1.0.6 (2024-11-08)</small>
+## <small>1.0.7 (2024-12-11)</small>
 
+* ci(.github): 🛠 - 自动化发布版本 ([319e27b](https://github.com/jsxiaosi/eslint-config/commit/319e27b))
+* build: 📦️ 工程依赖更新 ([34a805d](https://github.com/jsxiaosi/eslint-config/commit/34a805d))
+* build(eslint): 📦️ eslint,@typescript-eslint ([990dbe3](https://github.com/jsxiaosi/eslint-config/commit/990dbe3))
+* feat(commitlint,eslint,prettier): ✨ v1.0.6 ([bfe01fe](https://github.com/jsxiaosi/eslint-config/commit/bfe01fe))
 * fix(eslint): 🐛 peerDependencies eslint 依赖约束 ([641b42b](https://github.com/jsxiaosi/eslint-config/commit/641b42b))
 
 
