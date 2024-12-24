@@ -1,5 +1,13 @@
+## <small>1.0.8 (2024-12-24)</small>
+
+* docs(eslint): 📝 react rule dependencies description ([897bae2](https://github.com/jsxiaosi/eslint-config/commit/897bae2))
+* feat(eslint): ✨ react rules add eslint-plugin-react plugin ([625e153](https://github.com/jsxiaosi/eslint-config/commit/625e153))
+
+
+
 ## <small>1.0.7 (2024-12-11)</small>
 
+* docs(changelog): 📝 v1.0.7 ([e7cb3e6](https://github.com/jsxiaosi/eslint-config/commit/e7cb3e6))
 * ci(.github): 🛠 - 自动化发布版本 ([319e27b](https://github.com/jsxiaosi/eslint-config/commit/319e27b))
 * build: 📦️ 工程依赖更新 ([34a805d](https://github.com/jsxiaosi/eslint-config/commit/34a805d))
 * build(eslint): 📦️ eslint,@typescript-eslint ([990dbe3](https://github.com/jsxiaosi/eslint-config/commit/990dbe3))
