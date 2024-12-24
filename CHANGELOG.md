@@ -1,7 +1,15 @@
+## <small>1.0.9 (2024-12-24)</small>
+
+* feat(eslint): ✨ eslint-plugin-react sets the default react version 19 ([a5d208d](https://github.com/jsxiaosi/eslint-config/commit/a5d208d))
+* feat(eslint): ✨ the first parameter supports flat configuration ([7c899b8](https://github.com/jsxiaosi/eslint-config/commit/7c899b8))
+
+
+
 ## <small>1.0.8 (2024-12-24)</small>
 
-* docs(eslint): 📝 react rule dependencies description ([897bae2](https://github.com/jsxiaosi/eslint-config/commit/897bae2))
+* feat: ✨ v1.0.8 changelog ([4ec47be](https://github.com/jsxiaosi/eslint-config/commit/4ec47be))
 * feat(eslint): ✨ react rules add eslint-plugin-react plugin ([625e153](https://github.com/jsxiaosi/eslint-config/commit/625e153))
+* docs(eslint): 📝 react rule dependencies description ([897bae2](https://github.com/jsxiaosi/eslint-config/commit/897bae2))
 
 
 
