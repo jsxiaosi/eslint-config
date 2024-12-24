@@ -53,6 +53,14 @@ export async function react(
       },
     },
     {
+      name: 'jsxiaosi/react/settings',
+      settings: {
+        react: {
+          version: '19',
+        },
+      },
+    },
+    {
       files,
       languageOptions: {
         parser: parserTs,

@@ -207,6 +207,15 @@ import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
   react: true,
+  /**
+   * eslint-plugin-react requires specifying the react version
+   * The default is react 19 version
+   */
+  settings: {
+    react: {
+      version: '19', 
+    },
+  }
 });
 ```
 
