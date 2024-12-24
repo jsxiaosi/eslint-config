@@ -78,6 +78,7 @@ export default jsxiaosi(
   // 你可以有多个配置
   {
     files: ['**/*.ts'],
+    plugins:{},
     rules: {},
   },
   {
