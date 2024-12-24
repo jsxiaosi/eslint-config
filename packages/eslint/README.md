@@ -213,7 +213,7 @@ export default jsxiaosi({
 运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
 
 ```base
-pnpm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh
+pnpm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-react
 ```
 
 ### Prettier
