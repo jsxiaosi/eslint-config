@@ -21,6 +21,16 @@ import {
 import type { ConfigNames, RuleOptions } from './typegen';
 import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types';
 
+const flatConfigProps = [
+  'name',
+  'languageOptions',
+  'linterOptions',
+  'processor',
+  'plugins',
+  'rules',
+  'settings',
+] satisfies (keyof TypedFlatConfigItem)[];
+
 export function jsxiaosi(
   options: OptionsConfig & Omit<TypedFlatConfigItem, 'files'> = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | Linter.Config[]>[]
@@ -97,6 +107,14 @@ export function jsxiaosi(
   if (options.prettier) {
     configs.push(prettier(typeof options.prettier === 'object' ? options.prettier : {}));
   }
+
+  // User can optionally pass a flat config item to the first argument
+  // We pick the known keys as ESLint would do schema validation
+  const fusedConfig = flatConfigProps.reduce((acc, key) => {
+    if (key in options) acc[key] = options[key] as any;
+    return acc;
+  }, {} as TypedFlatConfigItem);
+  if (Object.keys(fusedConfig).length) configs.push([fusedConfig]);
 
   let composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>();
 
