@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/linting-configs",
   "type": "module",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": true,
   "description": "eslint 配置",
   "publishConfig": {
@@ -24,7 +24,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
     "release:eslint": "pnpm run -C packages/eslint release",
-    "lint:eslint": "eslint . --fix ",
+    "lint:eslint": "eslint ./packages --fix ",
+    "lint:test_eslint": "eslint . --fix ",
     "lint:prettier": "prettier . --write",
     "prepare": "husky",
     "cz": "czg",
@@ -50,7 +51,7 @@
     "commitlint": "^19.6.0",
     "conventional-changelog-cli": "^5.0.0",
     "czg": "^1.11.0",
-    "eslint": "^*",
+    "eslint": "^9.31.0",
     "husky": "^9.1.7",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
