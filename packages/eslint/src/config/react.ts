@@ -3,7 +3,14 @@ import { isPackageExists } from 'local-pkg';
 import { GLOB_SRC } from '../globs';
 import { ensurePackages, interopDefault } from '../utils';
 
-import type { OptionsFiles, OptionsOverrides, OptionsTypeScriptWithTypes, Rules, TypedFlatConfigItem } from '../types';
+import type {
+  OptionsFiles,
+  OptionsOverrides,
+  OptionsReact,
+  OptionsTypeScriptWithTypes,
+  Rules,
+  TypedFlatConfigItem,
+} from '../types';
 
 // react refresh
 const ReactRefreshAllowConstantExportPackages = ['vite'];
@@ -11,9 +18,9 @@ const RemixPackages = ['@remix-run/node', '@remix-run/react', '@remix-run/serve'
 const NextJsPackages = ['next'];
 
 export async function react(
-  options: OptionsTypeScriptWithTypes & OptionsOverrides & OptionsFiles = {},
+  options: OptionsReact & OptionsTypeScriptWithTypes & OptionsOverrides & OptionsFiles = {},
 ): Promise<TypedFlatConfigItem[]> {
-  const { files = [GLOB_SRC], overrides = {} } = options;
+  const { files = [GLOB_SRC], overrides = {}, emotion } = options;
 
   await ensurePackages([
     'eslint-plugin-react',
@@ -177,6 +184,12 @@ export async function react(
         'react/self-closing-comp': 'warn',
         // 禁止循环没有key
         'react/jsx-key': 'warn',
+
+        ...(emotion
+          ? {
+              'react/no-unknown-property': ['error', { ignore: ['css'] }],
+            }
+          : {}),
 
         ...(isTypeAware
           ? {

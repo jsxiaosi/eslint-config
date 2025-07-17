@@ -95,7 +95,7 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
 
   vue?: boolean | OptionsVue;
 
-  react?: boolean | OptionsOverrides;
+  react?: boolean | OptionsReact;
 
   prettier?: boolean | OptionsPrettier;
 }
@@ -113,6 +113,13 @@ export interface OptionsVue extends OptionsOverrides {
    * vue 版本
    */
   vueVersion?: 2 | 3;
+}
+
+export interface OptionsReact extends OptionsOverrides {
+  /**
+   * vue 版本
+   */
+  emotion?: boolean;
 }
 
 export interface OptionsPrettier {
