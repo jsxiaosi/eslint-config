@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/eslint-config-prettier",
   "type": "module",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -29,7 +29,7 @@
   "peerDependencies": {
     "prettier": ">=3.0.0"
   },
-  "devDependencies": {
-    "prettier": "^3.3.3"
+  "dependencies": {
+    "prettier": "^3.6.2"
   }
 }
