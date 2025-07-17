@@ -1,7 +1,18 @@
+## <small>1.0.11 (2025-07-17)</small>
+
+* feat: ✨ commitlint esm config ([6282c5a](https://github.com/jsxiaosi/eslint-config/commit/6282c5a))
+* feat(commitlint): ✨ commitlint 依赖约束 ([894486d](https://github.com/jsxiaosi/eslint-config/commit/894486d))
+* feat(prettier): ✨ prettier 依赖约束 dependencies ([62ca357](https://github.com/jsxiaosi/eslint-config/commit/62ca357))
+* fix(eslint): 🐛 vue ([9d97341](https://github.com/jsxiaosi/eslint-config/commit/9d97341))
+* fix(eslint): 🐛 vue eslint 配置支持flat config ([8d3002b](https://github.com/jsxiaosi/eslint-config/commit/8d3002b))
+
+
+
 ## <small>1.0.9 (2024-12-24)</small>
 
 * feat(eslint): ✨ eslint-plugin-react sets the default react version 19 ([a5d208d](https://github.com/jsxiaosi/eslint-config/commit/a5d208d))
 * feat(eslint): ✨ the first parameter supports flat configuration ([7c899b8](https://github.com/jsxiaosi/eslint-config/commit/7c899b8))
+* feat(eslint): ✨ v1.0.9 changelog ([522647c](https://github.com/jsxiaosi/eslint-config/commit/522647c))
 
 
 
