@@ -1,5 +1,13 @@
+## <small>1.0.12 (2025-07-20)</small>
+
+* feat: ✨ prettier ([5e0efd6](https://github.com/jsxiaosi/eslint-config/commit/5e0efd6))
+* feat(prettier): ✨ Add prettier-plugin-tailwindcss plugin ([a3a1599](https://github.com/jsxiaosi/eslint-config/commit/a3a1599))
+
+
+
 ## <small>1.0.11 (2025-07-17)</small>
 
+* feat(commitlint,eslint,prettier): ✨ v1.0.11 ([944074c](https://github.com/jsxiaosi/eslint-config/commit/944074c))
 * feat: ✨ commitlint esm config ([6282c5a](https://github.com/jsxiaosi/eslint-config/commit/6282c5a))
 * feat(commitlint): ✨ commitlint 依赖约束 ([894486d](https://github.com/jsxiaosi/eslint-config/commit/894486d))
 * feat(prettier): ✨ prettier 依赖约束 dependencies ([62ca357](https://github.com/jsxiaosi/eslint-config/commit/62ca357))

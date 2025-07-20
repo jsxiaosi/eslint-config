@@ -15,13 +15,40 @@ pnpm add -D @jsxiaosi/eslint-config-prettier prettier
 ```JavaScript
 import prettierConfig from '@jsxiaosi/eslint-config-prettier';
 
-export default {
-  ...prettierConfig,
-};
+export default prettierConfig();
 
 ```
 
-## 配合eslint使用
+### 自定义 Prettier
+```JavaScript
+import prettierConfig from '@jsxiaosi/eslint-config-prettier';
+
+export default prettierConfig({
+  plugins: [ /** plugin */ ]
+  printWidth: 120,
+  tabWidth: 2,
+  useTabs: false,
+});
+```
+
+### Tailwind CSS 类名排序支持
+
+#### 安装依赖
+
+```bash
+pnpm add prettier-plugin-tailwindcss -D
+```
+
+#### 配置方式
+```JavaScript
+import prettierConfig from '@jsxiaosi/eslint-config-prettier';
+
+export default prettierConfig({
+  tailwindcss: true,
+});
+```
+
+## 配合Eslint使用
 
 eslint.config.js 添加配置
 
