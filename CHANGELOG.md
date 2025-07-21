@@ -1,5 +1,12 @@
+## <small>1.0.13 (2025-07-21)</small>
+
+* feat(eslint): ✨ Add .toml and .yaml file examine ([5975883](https://github.com/jsxiaosi/eslint-config/commit/5975883))
+
+
+
 ## <small>1.0.12 (2025-07-20)</small>
 
+* feat: ✨ v1.0.12 ([ac54c5c](https://github.com/jsxiaosi/eslint-config/commit/ac54c5c))
 * feat(prettier): ✨ Add prettier-plugin-tailwindcss plugin ([eaeea76](https://github.com/jsxiaosi/eslint-config/commit/eaeea76))
 
 
