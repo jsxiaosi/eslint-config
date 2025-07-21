@@ -15,8 +15,10 @@ import {
   perfectionist,
   prettier,
   react,
+  toml,
   typescript,
   vue,
+  yaml,
 } from '../src';
 import type { Awaitable, TypedFlatConfigItem } from '../src/types';
 
@@ -48,6 +50,8 @@ const configs = await combine(
   react(),
   typescript(),
   vue(),
+  yaml(),
+  toml(),
 );
 
 const configNames = configs.map(i => i.name).filter(Boolean) as string[];

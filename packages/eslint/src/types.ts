@@ -83,21 +83,93 @@ export type OptionsTypescript =
   | (OptionsTypeScriptParserOptions & OptionsOverrides);
 
 export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {
+  /**
+   * Core rules. Can't be disabled.
+   */
   javascript?: OptionsOverrides;
 
+  /**
+   * Enable JSX related rules.
+   *
+   * Currently only stylistic rules are included.
+   *
+   * @default true
+   */
   jsx?: boolean;
 
+  /**
+   * Enable JSONC support.
+   *
+   * @default true
+   */
   jsonc?: boolean | OptionsOverrides;
 
+  /**
+   * Enable linting for **code snippets** in Markdown.
+   *
+   * For formatting Markdown content, enable also `formatters.markdown`.
+   *
+   * @default true
+   */
   markdown?: boolean | OptionsOverrides;
 
+  /**
+   * Enable TypeScript support.
+   *
+   * Passing an object to enable TypeScript Language Server support.
+   *
+   * @default auto-detect based on the dependencies
+   */
   typescript?: boolean | OptionsTypescript;
 
+  /**
+   * Enable vue support.
+   *
+   * Requires installing:
+   * - `eslint-plugin-vue`
+   * - `vue-eslint-parser`
+   *
+   * @default false
+   */
   vue?: boolean | OptionsVue;
 
+  /**
+   * Enable react support.
+   *
+   * Requires installing:
+   * - `@eslint-react/eslint-plugin`
+   * - `eslint-plugin-react-hooks`
+   * - `eslint-plugin-react-refresh`
+   * - `@eslint-react/eslint-plugin`
+   *
+   * @default false
+   */
   react?: boolean | OptionsReact;
 
+  /**
+   * Enable prettier support.
+   *
+   * Requires installing:
+   * - `eslint-plugin-prettier`
+   * - `prettier`
+   *
+   * @default false
+   */
   prettier?: boolean | OptionsPrettier;
+
+  /**
+   * Enable YAML support.
+   *
+   * @default true
+   */
+  yaml?: boolean | OptionsOverrides;
+
+  /**
+   * Enable TOML support.
+   *
+   * @default true
+   */
+  toml?: boolean | OptionsOverrides;
 }
 
 export interface OptionsHasTypeScript {

@@ -10,5 +10,7 @@ export * from './perfectionist';
 export * from './prettier';
 export * from './react';
 export * from './sort';
+export * from './toml';
 export * from './typescript';
 export * from './vue';
+export * from './yaml';

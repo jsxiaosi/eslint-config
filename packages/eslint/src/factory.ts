@@ -15,8 +15,10 @@ import {
   react,
   sortPackageJson,
   sortTsconfig,
+  toml,
   typescript,
   vue,
+  yaml,
 } from './config';
 import type { ConfigNames, RuleOptions } from './typegen';
 import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types';
@@ -44,7 +46,6 @@ export function jsxiaosi(
     comments(),
     imports(),
     node(),
-    javascript(),
     perfectionist(),
   ];
 
@@ -100,6 +101,22 @@ export function jsxiaosi(
       markdown({
         componentExts,
         overrides: getOverrides(options, 'markdown'),
+      }),
+    );
+  }
+
+  if (options.yaml ?? true) {
+    configs.push(
+      yaml({
+        overrides: getOverrides(options, 'yaml'),
+      }),
+    );
+  }
+
+  if (options.toml ?? true) {
+    configs.push(
+      toml({
+        overrides: getOverrides(options, 'toml'),
       }),
     );
   }
