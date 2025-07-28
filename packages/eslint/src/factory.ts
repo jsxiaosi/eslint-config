@@ -6,6 +6,7 @@ import {
   ignores,
   imports,
   javascript,
+  jsdoc,
   jsonc,
   jsx,
   markdown,
@@ -46,6 +47,7 @@ export function jsxiaosi(
     comments(),
     imports(),
     node(),
+    jsdoc(),
     perfectionist(),
   ];
 
