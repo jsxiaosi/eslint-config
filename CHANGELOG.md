@@ -1,6 +1,13 @@
+## <small>1.0.14 (2025-07-28)</small>
+
+* feat(eslint): ✨ Add jsdoc eslint ([29e641d](https://github.com/jsxiaosi/eslint-config/commit/29e641d))
+
+
+
 ## <small>1.0.13 (2025-07-21)</small>
 
 * feat(eslint): ✨ Add .toml and .yaml file examine ([5975883](https://github.com/jsxiaosi/eslint-config/commit/5975883))
+* feat(eslint): ✨ v1.0.13 ([7ae9a34](https://github.com/jsxiaosi/eslint-config/commit/7ae9a34))
 
 
 
