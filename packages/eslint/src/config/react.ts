@@ -152,6 +152,8 @@ export async function react(
 
         ...(pluginReact.configs.recommended.rules as Partial<Rules>),
         'react/display-name': 'off',
+        // 禁止JSX 中的重复属性
+        'react/jsx-no-duplicate-props': 'warn',
         // 禁止jsx传递props
         'react/jsx-props-no-spreading': 'off',
         // 强制类格式化类组件 https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
