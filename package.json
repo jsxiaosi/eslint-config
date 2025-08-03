@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/linting-configs",
   "type": "module",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": true,
   "description": "eslint 配置",
   "publishConfig": {

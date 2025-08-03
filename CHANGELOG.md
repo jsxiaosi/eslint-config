@@ -1,6 +1,13 @@
+## <small>1.0.15 (2025-08-03)</small>
+
+* fix(eslint): 🐛 @typescript-eslint 支持 typescript@5.9.2 ([c0615f2](https://github.com/jsxiaosi/eslint-config/commit/c0615f2))
+
+
+
 ## <small>1.0.14 (2025-07-28)</small>
 
 * feat(eslint): ✨ Add jsdoc eslint ([29e641d](https://github.com/jsxiaosi/eslint-config/commit/29e641d))
+* feat(eslint): ✨ v1.0.14 ([88528ab](https://github.com/jsxiaosi/eslint-config/commit/88528ab))
 
 
 
