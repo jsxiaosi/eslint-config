@@ -82,7 +82,7 @@ export async function react(
       name: 'jsxiaosi/react/rules',
       rules: {
         // recommended rules from @eslint-react/dom
-        'react-dom/no-children-in-void-dom-elements': 'warn',
+        'react-dom/no-void-elements-with-children': 'warn',
         'react-dom/no-dangerously-set-innerhtml': 'warn',
         'react-dom/no-dangerously-set-innerhtml-with-children': 'error',
         'react-dom/no-find-dom-node': 'error',
@@ -113,7 +113,7 @@ export async function react(
         ],
 
         // recommended rules from @eslint-react
-        'react-plugin/ensure-forward-ref-using-ref': 'warn',
+        'react-plugin/no-useless-forward-ref': 'warn',
         'react-plugin/no-access-state-in-setstate': 'error',
         'react-plugin/no-array-index-key': 'warn',
         'react-plugin/no-children-count': 'warn',
@@ -123,7 +123,7 @@ export async function react(
         'react-plugin/no-children-prop': 'warn',
         'react-plugin/no-children-to-array': 'warn',
         'react-plugin/no-clone-element': 'warn',
-        'react-plugin/no-comment-textnodes': 'warn',
+        'react-plugin/jsx-no-comment-textnodes': 'warn',
         'react-plugin/no-component-will-mount': 'error',
         'react-plugin/no-component-will-receive-props': 'error',
         'react-plugin/no-component-will-update': 'error',
@@ -132,7 +132,7 @@ export async function react(
         'react-plugin/no-duplicate-key': 'error',
         'react-plugin/no-implicit-key': 'error',
         'react-plugin/no-missing-key': 'error',
-        'react-plugin/no-nested-components': 'warn',
+        'react-plugin/no-nested-component-definitions': 'warn',
         'react-plugin/no-redundant-should-component-update': 'error',
         'react-plugin/no-set-state-in-component-did-mount': 'warn',
         'react-plugin/no-set-state-in-component-did-update': 'warn',
@@ -147,8 +147,8 @@ export async function react(
         'react-plugin/no-unused-state': 'warn',
         'react-plugin/no-useless-fragment': 'warn',
         'react-plugin/prefer-destructuring-assignment': 'warn',
-        'react-plugin/prefer-shorthand-boolean': 'warn',
-        'react-plugin/prefer-shorthand-fragment': 'warn',
+        'react-plugin/jsx-shorthand-boolean': 'warn',
+        'react-plugin/jsx-shorthand-fragment': 'warn',
 
         ...(pluginReact.configs.recommended.rules as Partial<Rules>),
         'react/display-name': 'off',
