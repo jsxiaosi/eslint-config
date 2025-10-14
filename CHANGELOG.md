@@ -1,5 +1,12 @@
+## <small>1.0.16 (2025-10-14)</small>
+
+* fix(eslint): 🐛 @eslint-react update v2 ([d6b3918](https://github.com/jsxiaosi/eslint-config/commit/d6b3918))
+
+
+
 ## <small>1.0.15 (2025-08-03)</small>
 
+* feat(eslint): ✨ v1.0.14 ([88fe2a2](https://github.com/jsxiaosi/eslint-config/commit/88fe2a2))
 * fix(eslint): 🐛 @typescript-eslint 支持 typescript@5.9.2 ([c0615f2](https://github.com/jsxiaosi/eslint-config/commit/c0615f2))
 
 
@@ -148,10 +155,10 @@
 * build: 📦️ 删除多余依赖 ([6f6af12](https://github.com/jsxiaosi/eslint-config/commit/6f6af12))
 * feat: ✨ add commlint ([67f4467](https://github.com/jsxiaosi/eslint-config/commit/67f4467))
 * feat(commitlint): ✨ add commitlint config ([05e2ba8](https://github.com/jsxiaosi/eslint-config/commit/05e2ba8))
-* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * feature: add eslint base ts vue ([1923799](https://github.com/jsxiaosi/eslint-config/commit/1923799))
 * feature: add eslint-config project ([b7f785c](https://github.com/jsxiaosi/eslint-config/commit/b7f785c))
 * feature: improt  promise ([c5a3243](https://github.com/jsxiaosi/eslint-config/commit/c5a3243))
+* feature: 添加教程 ([a1698a6](https://github.com/jsxiaosi/eslint-config/commit/a1698a6))
 * chore: 0.0.6 ([3782e7c](https://github.com/jsxiaosi/eslint-config/commit/3782e7c))
 * chore: delete promise eslint ([25b39ba](https://github.com/jsxiaosi/eslint-config/commit/25b39ba))
 * fixbug: base version 0.0.1 ([40703b4](https://github.com/jsxiaosi/eslint-config/commit/40703b4))
