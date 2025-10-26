@@ -1,5 +1,12 @@
+## <small>1.0.17 (2025-10-26)</small>
+
+* ci: 🛠 add publish action ([dc261c5](https://github.com/jsxiaosi/eslint-config/commit/dc261c5))
+
+
+
 ## <small>1.0.16 (2025-10-14)</small>
 
+* feat: ✨ v1.0.16 ([e09a8c9](https://github.com/jsxiaosi/eslint-config/commit/e09a8c9))
 * fix(eslint): 🐛 @eslint-react update v2 ([d6b3918](https://github.com/jsxiaosi/eslint-config/commit/d6b3918))
 
 
