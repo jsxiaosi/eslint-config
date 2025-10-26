@@ -6,7 +6,13 @@
   "author": "jsxiaosi",
   "license": "MIT",
   "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/eslint",
-  "repository": "https://github.com/jsxiaosi/eslint-config.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsxiaosi/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsxiaosi/eslint-config/issues"
+  },
   "keywords": [
     "eslint-config"
   ],

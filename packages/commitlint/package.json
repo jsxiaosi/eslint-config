@@ -6,6 +6,13 @@
   "author": "jsxiaosi",
   "license": "MIT",
   "homepage": "https://github.com/jsxiaosi/eslint-config/tree/main/packages/commitlint#jsxiaosicommitlint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsxiaosi/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsxiaosi/eslint-config/issues"
+  },
   "keywords": [
     "commitlint",
     "commitlint-config"

@@ -9,10 +9,10 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/jsxiaosi/eslint-config/tree/readme#readme",
+  "homepage": "https://github.com/jsxiaosi/eslint-config",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsxiaosi/eslint-config.git#readme"
+    "url": "git+https://github.com/jsxiaosi/eslint-config.git"
   },
   "bugs": {
     "url": "https://github.com/jsxiaosi/eslint-config/issues"
