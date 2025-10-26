@@ -1,6 +1,8 @@
 ## <small>1.0.17 (2025-10-26)</small>
 
 * ci: 🛠 add publish action ([dc261c5](https://github.com/jsxiaosi/eslint-config/commit/dc261c5))
+* ci: 🛠 publish 依赖安装 ([9e92752](https://github.com/jsxiaosi/eslint-config/commit/9e92752))
+* feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 
 
 
