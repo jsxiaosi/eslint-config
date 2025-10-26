@@ -1,7 +1,10 @@
 ## <small>1.0.17 (2025-10-26)</small>
 
+* chore(commitlint,eslint,prettier): 🔨 package.json add repository ([afcd5ce](https://github.com/jsxiaosi/eslint-config/commit/afcd5ce))
 * ci: 🛠 add publish action ([dc261c5](https://github.com/jsxiaosi/eslint-config/commit/dc261c5))
 * ci: 🛠 publish 依赖安装 ([9e92752](https://github.com/jsxiaosi/eslint-config/commit/9e92752))
+* ci(publish): 🛠 pnpm add --no-git-checks ([4e0217e](https://github.com/jsxiaosi/eslint-config/commit/4e0217e))
+* feat: ✨ v1.0.17 ([e4f322e](https://github.com/jsxiaosi/eslint-config/commit/e4f322e))
 * feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 
 
