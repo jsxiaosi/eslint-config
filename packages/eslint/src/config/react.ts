@@ -44,7 +44,7 @@ export async function react(
   const isUsingRemix = RemixPackages.some(i => isPackageExists(i));
   const isUsingNext = NextJsPackages.some(i => isPackageExists(i));
 
-  const plugins = pluginEslintReact.configs.all.plugins;
+  const plugins = (pluginEslintReact.configs.all as any).plugins;
 
   return [
     {

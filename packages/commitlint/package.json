@@ -30,20 +30,20 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
-    "@commitlint/cli": ">=19.5.0",
-    "@commitlint/config-conventional": ">=19.5.0",
-    "commitlint": ">=19.5.0",
+    "@commitlint/cli": ">=20",
+    "@commitlint/config-conventional": ">=20",
+    "commitlint": ">=20",
     "czg": ">=1.10.0",
     "husky": ">=8.0.0"
   },
   "dependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "commitizen": "^4.3.1",
-    "commitlint": "^19.8.1"
+    "commitlint": "^20.1.0"
   },
   "devDependencies": {
     "czg": "^1.12.0",
-    "tsup": "^8.5.0"
+    "tsup": "^8.5.1"
   }
 }
