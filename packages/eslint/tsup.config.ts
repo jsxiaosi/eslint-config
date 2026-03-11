@@ -5,6 +5,8 @@ export default defineConfig({
   outDir: 'dist',
   external: ['pathe'],
   shims: true,
-  dts: true,
+  dts: {
+    resolve: true,
+  },
   clean: true,
 });

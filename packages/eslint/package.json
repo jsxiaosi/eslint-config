@@ -32,6 +32,7 @@
   },
   "scripts": {
     "build": "npm run typegen && tsup --format esm,cjs",
+    "build:rolldown": "rolldown -c",
     "release": "bump package.json",
     "typegen": "tsx scripts/typegen.ts"
   },
@@ -108,6 +109,8 @@
     "eslint-typegen": "^2.3.0",
     "prettier": "^3.7.3",
     "prettier-plugin-slidev": "^1.0.5",
+    "rolldown": "1.0.0-beta.53",
+    "rolldown-plugin-dts": "^0.18.3",
     "tsx": "^4.21.0",
     "vue-eslint-parser": "^10.2.0"
   }
