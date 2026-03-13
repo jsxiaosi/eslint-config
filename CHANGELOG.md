@@ -1,7 +1,14 @@
+## <small>1.0.19 (2026-03-13)</small>
+
+* ci: 🛠 publish ci/cd node-version lts ([e3c881f](https://github.com/jsxiaosi/eslint-config/commit/e3c881f))
+
+
+
 ## <small>1.0.18 (2026-03-13)</small>
 
 * build(commitlint,eslint,prettier): 📦️ - Eslint 升级依赖、解决perfectionist/sort-imports 和 sort-imports冲突问题 ([4a7c78e](https://github.com/jsxiaosi/eslint-config/commit/4a7c78e))
 * build(commitlint,eslint,prettier): 📦️ 升级插件依赖 ([82edfe2](https://github.com/jsxiaosi/eslint-config/commit/82edfe2))
+* feat(commitlint,eslint,prettier): ✨ v1.0.18 ([8fa5ae6](https://github.com/jsxiaosi/eslint-config/commit/8fa5ae6))
 * build: 📦️ glob cli 安全警告 ([9d8e329](https://github.com/jsxiaosi/eslint-config/commit/9d8e329)), closes [#22](https://github.com/jsxiaosi/eslint-config/issues/22)
 
 
