@@ -1,5 +1,7 @@
-## <small>1.0.19 (2026-03-13)</small>
+## <small>1.0.20 (2026-03-13)</small>
 
+* fix(commitlint): 🐛 Cannot find module commitlint/types or its corresponding type declarations ([83df936](https://github.com/jsxiaosi/eslint-config/commit/83df936))
+* feat(commitlint,eslint,prettier): ✨ v1.0.19 ([99ced7d](https://github.com/jsxiaosi/eslint-config/commit/99ced7d))
 * ci: 🛠 publish ci/cd node-version lts ([e3c881f](https://github.com/jsxiaosi/eslint-config/commit/e3c881f))
 
 
