@@ -1,7 +1,14 @@
+## <small>1.0.21 (2026-03-13)</small>
+
+* ci: 🛠 删除nodetoken ([4467fee](https://github.com/jsxiaosi/eslint-config/commit/4467fee))
+
+
+
 ## <small>1.0.20 (2026-03-13)</small>
 
-* fix(commitlint): 🐛 Cannot find module commitlint/types or its corresponding type declarations ([83df936](https://github.com/jsxiaosi/eslint-config/commit/83df936))
 * feat(commitlint,eslint,prettier): ✨ v1.0.19 ([99ced7d](https://github.com/jsxiaosi/eslint-config/commit/99ced7d))
+* feat(commitlint,eslint,prettier): ✨ v1.0.20 ([4a897c3](https://github.com/jsxiaosi/eslint-config/commit/4a897c3))
+* fix(commitlint): 🐛 Cannot find module commitlint/types or its corresponding type declarations ([83df936](https://github.com/jsxiaosi/eslint-config/commit/83df936))
 * ci: 🛠 publish ci/cd node-version lts ([e3c881f](https://github.com/jsxiaosi/eslint-config/commit/e3c881f))
 
 
