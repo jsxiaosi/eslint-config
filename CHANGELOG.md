@@ -1,11 +1,20 @@
+## <small>1.0.18 (2026-03-13)</small>
+
+* build(commitlint,eslint,prettier): 📦️ - Eslint 升级依赖、解决perfectionist/sort-imports 和 sort-imports冲突问题 ([4a7c78e](https://github.com/jsxiaosi/eslint-config/commit/4a7c78e))
+* build(commitlint,eslint,prettier): 📦️ 升级插件依赖 ([82edfe2](https://github.com/jsxiaosi/eslint-config/commit/82edfe2))
+* build: 📦️ glob cli 安全警告 ([9d8e329](https://github.com/jsxiaosi/eslint-config/commit/9d8e329)), closes [#22](https://github.com/jsxiaosi/eslint-config/issues/22)
+
+
+
 ## <small>1.0.17 (2025-10-26)</small>
 
+* feat: ✨ v1.0.17 ([f67f5e0](https://github.com/jsxiaosi/eslint-config/commit/f67f5e0))
+* feat: ✨ v1.0.17 ([e4f322e](https://github.com/jsxiaosi/eslint-config/commit/e4f322e))
+* feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 * chore(commitlint,eslint,prettier): 🔨 package.json add repository ([afcd5ce](https://github.com/jsxiaosi/eslint-config/commit/afcd5ce))
 * ci: 🛠 add publish action ([dc261c5](https://github.com/jsxiaosi/eslint-config/commit/dc261c5))
 * ci: 🛠 publish 依赖安装 ([9e92752](https://github.com/jsxiaosi/eslint-config/commit/9e92752))
 * ci(publish): 🛠 pnpm add --no-git-checks ([4e0217e](https://github.com/jsxiaosi/eslint-config/commit/4e0217e))
-* feat: ✨ v1.0.17 ([e4f322e](https://github.com/jsxiaosi/eslint-config/commit/e4f322e))
-* feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 
 
 
