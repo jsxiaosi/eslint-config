@@ -1,257 +1,116 @@
 # @jsxiaosi/eslint-config
 
-基于[@antfu/eslint-config](https://github.com/antfu/eslint-config)修改的个人配置
+基于 ESLint Flat Config 的共享配置。默认包含 JavaScript、TypeScript、JSON、YAML、TOML 和 Markdown 规则，可按需开启 Vue、React 和 Prettier 支持。
 
-- 可选React、Vue配置
-- 可选的Prettier风格化配置
+## 公开兼容性
+
+- 基础包当前对外声明的 peer contract 是 `eslint >=9.10.0`；`package.json` 目前不声明 `engines.node`
+- 开启 `react: true` 时，需要额外安装 React lint 依赖，并满足这些依赖自己的 Node floor；当前仓库锁文件解析到 `@eslint-react/eslint-plugin@2.13.0`，其 `engines.node` 为 `>=20.19.0`
+- 这个 monorepo 以及 `publish.yml` 的开发/发布环境当前使用 Node `^20.19.0 || ^22.13.0 || >=24.0.0`
+- 如果项目使用 TypeScript，请安装 `typescript`；安装后会自动启用 TypeScript 规则
 
 ## 安装
 
-```base
-pnpm add -D @jsxiaosi/eslint-config eslint
+基础安装：
+
+```bash
+pnpm add -D eslint @jsxiaosi/eslint-config typescript
 ```
 
-## 配置eslint.config.js
+按需安装可选能力：
 
-```javascript
+- Vue: `pnpm add -D eslint-plugin-vue vue-eslint-parser`
+- React: `pnpm add -D @eslint-react/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh`
+- Prettier: `pnpm add -D eslint-plugin-prettier prettier`
+
+启用对应能力但未安装依赖时，配置会在运行时提示安装缺失包。
+
+## 基础用法
+
+`eslint.config.mjs`
+
+```js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi();
 ```
 
-## 添加命令
+`package.json`
 
-```base
+```json
 {
-  "lint:eslint": "eslint . --fix",
-  "tsc": "tsc --noEmit --skipLibCheck",
-}
-```
-
-## VS Code 自动修复
-
-```base
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   }
 }
-
 ```
 
-## 定制
+## 常用配置
 
-配置集成
+### 忽略文件与项目类型
 
-```javascript
-// eslint.config.js
+```js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi({
-  // 项目类型。'lib' 表示库，默认为 'app'
   type: 'lib',
-
-  // TypeScript 是自动检测的，你也可以明确启用它们：
-  typescript: true,
-
-  // 禁用 jsonc 和 yaml 支持
-  jsonc: false,
-
-  // Flat 配置不再支持 `.eslintignore`，请改用 `ignores`
-  ignores: [
-    '**/fixtures',
-    // ...globs
-  ],
+  ignores: ['**/fixtures/**', '**/dist/**'],
 });
 ```
 
-```javascript
-// eslint.config.js
+### Vue、React、Prettier
+
+```js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
-export default jsxiaosi(
-  {
-    // jsxiaosi config 配置
+export default jsxiaosi({
+  vue: true,
+  react: true,
+  prettier: {
+    usePrettierrc: true,
   },
-
-  // 从第二个参数开始，它们是 ESLint Flat Configs
-  // 你可以有多个配置
-  {
-    files: ['**/*.ts'],
-    plugins:{},
-    rules: {},
-  },
-  {
-    rules: {},
-  },
-);
-```
-
-## 插件重命名
-
-| New Prefix | Original Prefix | Source Plugin |
-| --- | --- | --- |
-| `ts/*` | `@typescript-eslint/*` | [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint) |
-
-自定义前缀
-
-```javascript
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi().renamePlugins({
-  /**
-   * {
-   *    oldPrefix: newPrefix
-   * }
-   */
-  ts: '@typescript-eslint',
-  // ...
 });
 ```
 
-## 覆盖规则
+### TypeScript 类型感知规则
 
-某些规则仅在特定文件中启用，例如，ts/*规则仅在文件中启用.ts，vue/*规则仅在文件中启用.vue。如果要覆盖规则，则需要指定文件扩展名：
+```js
+import jsxiaosi from '@jsxiaosi/eslint-config';
 
-```javascript
-// eslint.config.js
+export default jsxiaosi({
+  typescript: {
+    tsconfigPath: './tsconfig.json',
+  },
+});
+```
+
+### 覆盖规则和追加 Flat Config
+
+```js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
 export default jsxiaosi(
   {
     vue: true,
-    typescript: true,
+    typescript: {
+      overrides: {
+        'ts/consistent-type-definitions': ['error', 'interface'],
+      },
+    },
   },
   {
-    // 请记住在此处指定文件 glob，否则可能会导致 vue 插件处理非 vue 文件
     files: ['**/*.vue'],
     rules: {
       'vue/operator-linebreak': ['error', 'before'],
     },
   },
-  {
-    // 不带“文件”的规则是所有文件的通用规则
-    rules: {
-      'style/semi': ['error', 'never'],
-    },
-  },
 );
 ```
 
-每个配置中集成了`overrides`方便覆盖规则
+## 说明
 
-```javascript
-// eslint.config.js
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-  vue: {
-    overrides: {
-      'vue/operator-linebreak': ['error', 'before'],
-    },
-  },
-  typescript: {
-    overrides: {
-      'ts/consistent-type-definitions': ['error', 'interface'],
-    },
-  },
-  yaml: {
-    overrides: {
-      // ...
-    },
-  },
-});
-```
-
-## 配置
-
-### Vue
-
-启动`Vue`配置
-
-```javascript
-// eslint.config.js
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-  vue: true,
-});
-```
-
-Vue2
-
-`vueVersion` 默认Vue3版本，手动更改成Vue2版本
-
-```javascript
-// eslint.config.js
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-  vue: {
-    vueVersion: 2,
-  },
-});
-```
-
-运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
-
-```base
-pnpm -D eslint-plugin-vue vue-eslint-parser
-```
-
-### React
-
-```javascript
-// eslint.config.js
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-  react: true,
-  /**
-   * eslint-plugin-react requires specifying the react version
-   * The default is react 19 version
-   */
-  settings: {
-    react: {
-      version: '19', 
-    },
-  }
-});
-```
-
-运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
-
-```base
-pnpm i -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh eslint-plugin-react
-```
-
-### Prettier
-
-```javascript
-// eslint.config.js
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-  prettier: true,
-});
-```
-
-运行 `npm run lint:eslint` 会提示你安装对应的插件，你也可以手动安装
-
-```base
-pnpm i -D eslint-plugin-prettier prettier
-```
-
-使用外部`Prettier`配置文件
-
-``` javascript
-import jsxiaosi from '@jsxiaosi/eslint-config';
-
-export default jsxiaosi({
-   prettier:{
-     usePrettierrc: true
-    }
-});
-```
-
-同时也提供了`Prettier`外部文件的配置 [@jsxiaosi/eslint-config-prettier](https://github.com/jsxiaosi/eslint-config/tree/main/packages/prettier)
+- Flat Config 不再使用 `.eslintignore`，请改用 `ignores`
+- `typescript` 默认按项目依赖自动检测；不需要时可显式设置为 `false`
+- `react` 默认按 React 19 规则集生成 `settings.react.version`
+- 如果需要单独共享 Prettier 配置，查看 [`@jsxiaosi/eslint-config-prettier`](../prettier/README.md)

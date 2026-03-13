@@ -1,6 +1,5 @@
 import { GLOB_VUE } from '../globs';
 import { ensurePackages, interopDefault } from '../utils';
-
 import type {
   OptionsFiles,
   OptionsHasPrettier,

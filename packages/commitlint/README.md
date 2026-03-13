@@ -1,108 +1,61 @@
 # @jsxiaosi/commitlint-config
 
-- 合理的默认配置
-- commit 校验，更好维护工程化项目
-- 使用简单无需繁琐的添加配置
-- 内置cz-git 友好型命令行工具，“懒字优先” ！支持在命令行搜索和选择，减少拼写错误
+共享 Commitlint 配置，内置 Conventional Commits 规则和 `czg` 交互式提交提示。
+
+## 运行要求
+
+- Node `>=18`
+- `@commitlint/cli` `>=20`
+- `@commitlint/config-conventional` `>=20`
+- `commitlint` `>=20`
+- `czg` `>=1.10.0`
+- `husky` `>=8.0.0`，仅在需要 Git hook 时安装
 
 ## 安装
 
-```base
-pnpm add -D @jsxiaosi/commitlint-config czg
+```bash
+pnpm add -D @commitlint/cli @commitlint/config-conventional commitlint @jsxiaosi/commitlint-config czg
 ```
 
-## 配置commitlint.config.js
+如果需要 Git hook，再额外安装：
 
-```base
+```bash
+pnpm add -D husky
+```
+
+## 基础用法
+
+`commitlint.config.mjs`
+
+```js
+export default {
+  extends: ['@jsxiaosi/commitlint-config'],
+};
+```
+
+`package.json`
+
+```json
 {
-  extends: ['@jsxiaosi/commitlint-config']
-}
-```
-
-## package.json添加配置
-
-```base
-"config": {
+  "scripts": {
+    "commit": "czg"
+  },
+  "config": {
     "commitizen": {
       "path": "node_modules/cz-git"
     }
   }
-```
-
-## 添加命令
-
-```base
-{
-  "cz": "czg",
 }
 ```
 
-## husky
+## Git hook 集成
 
-cz-git配合husky使用
+如果项目已经使用 Husky，在 `.husky/commit-msg` 中执行：
 
-- 安装
-
-```base
-pnpm add -D husky
+```sh
+pnpm exec commitlint --edit "$1"
 ```
 
-- 配置husky
+## 内置提交类型
 
-```base
-npx husky-init
-```
-
-- 添加Hook
-
-```base
-npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"
-```
-
-## 内置类型
-
-- `feat:` 新增功能
-- `fix:` 修复缺陷
-- `docs:` 文档变更
-- `style:` 代码格式
-- `refactor:` 代码重构
-- `perf:` 性能优化
-- `test:` 添加疏漏测试或已有测试改动
-- `build:` 构建流程、外部依赖变更 (如升级 npm 包、修改打包配置等)
-- `ci:` 修改 CI 配置、脚本
-- `revert:` 回滚 commit
-- `chore:` 对构建过程或辅助工具和库的更改 (不影响源文件)
-- `wip:` 正在开发中
-- `types:` 类型定义文件修改
-
-## cz-git
-
-[`cz-git`](https://cz-git.qbb.sh/zh/)一款工程性更强，轻量级，高度自定义，标准输出格式的 commitizen 适配器
-
-cz-git的功能非常丰富，但是一些额外的配置需要用逻辑来实现，如果内置这些配置的话会有一定的约束性，所以一些cz-git 更高级的用法需要自行在项目中添加
-
-### scopes配置举例
-
-- 修改commitlint.config.js
-
-```base
-const fs = require('fs');
-const path = require('path');
-
-const scopes = fs.readdirSync(path.resolve(__dirname, 'packages'));
-
-module.exports = {
-  extends: ['@jsxiaosi/commitlint-config'],
-  prompt: {
-    // 范围设置
-    scopes: [...scopes, 'mock'],
-    // 范围是否可以多选
-    enableMultipleScopes: true,
-    // 多选范围后用标识符隔开
-    scopeEnumSeparator: ',',
-  },
-};
-
-```
-
-更多高级用法详细请看：[cz-git](https://cz-git.qbb.sh/zh/recipes/)
+`feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `revert`, `chore`, `wip`, `types`

@@ -2,7 +2,6 @@ import { isPackageExists } from 'local-pkg';
 
 import { GLOB_SRC } from '../globs';
 import { ensurePackages, interopDefault } from '../utils';
-
 import type {
   OptionsFiles,
   OptionsOverrides,
@@ -130,7 +129,7 @@ export async function react(
         'react-plugin/no-create-ref': 'error',
         'react-plugin/no-direct-mutation-state': 'error',
         'react-plugin/no-duplicate-key': 'error',
-        'react-plugin/no-implicit-key': 'error',
+        'react-plugin/no-implicit-key': 'off',
         'react-plugin/no-missing-key': 'error',
         'react-plugin/no-nested-component-definitions': 'warn',
         'react-plugin/no-redundant-should-component-update': 'error',
@@ -195,6 +194,7 @@ export async function react(
 
         ...(isTypeAware
           ? {
+              'react-plugin/no-implicit-key': 'error',
               'react-plugin/no-leaked-conditional-rendering': 'warn',
             }
           : {}),

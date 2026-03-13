@@ -1,5 +1,4 @@
 import { interopDefault } from '../utils';
-
 import type { TypedFlatConfigItem } from '../types';
 
 export async function jsdoc(): Promise<TypedFlatConfigItem[]> {

@@ -1,5 +1,4 @@
 import { GLOB_TOML } from '../globs';
-
 import { interopDefault } from '../utils';
 import type { OptionsFiles, OptionsOverrides, TypedFlatConfigItem } from '../types';
 

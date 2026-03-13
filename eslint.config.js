@@ -10,6 +10,6 @@ export default jsxiaosi(
     },
   },
   {
-    ignores: ['**/typegen.d.ts'],
+    ignores: ['**/fixtures/**', '**/typegen.d.ts'],
   },
 );

@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core';
 import { builtinRules } from 'eslint/use-at-your-own-risk';
 
