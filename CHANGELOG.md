@@ -1,5 +1,13 @@
+## <small>1.0.23 (2026-03-14)</small>
+
+* ci: 🛠 contents: write ([1062a82](https://github.com/jsxiaosi/eslint-config/commit/1062a82))
+* ci: 🛠 release changelog jobs ([e6424a7](https://github.com/jsxiaosi/eslint-config/commit/e6424a7))
+
+
+
 ## <small>1.0.22 (2026-03-14)</small>
 
+* feat: ✨ v1.0.22 ([b60f6c8](https://github.com/jsxiaosi/eslint-config/commit/b60f6c8))
 * ci: 🛠 permissions id-token write ([2c36334](https://github.com/jsxiaosi/eslint-config/commit/2c36334))
 
 
