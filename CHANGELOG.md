@@ -1,5 +1,12 @@
+## <small>1.0.22 (2026-03-14)</small>
+
+* ci: 🛠 permissions id-token write ([2c36334](https://github.com/jsxiaosi/eslint-config/commit/2c36334))
+
+
+
 ## <small>1.0.21 (2026-03-13)</small>
 
+* feat: ✨ v1.0.21 ([2e39be2](https://github.com/jsxiaosi/eslint-config/commit/2e39be2))
 * ci: 🛠 删除nodetoken ([4467fee](https://github.com/jsxiaosi/eslint-config/commit/4467fee))
 
 
