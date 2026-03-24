@@ -1,7 +1,5 @@
 import { isPackageExists } from 'local-pkg';
 
-import { GLOB_SRC } from '../globs';
-import { ensurePackages, interopDefault } from '../utils';
 import type {
   OptionsFiles,
   OptionsOverrides,
@@ -10,6 +8,8 @@ import type {
   Rules,
   TypedFlatConfigItem,
 } from '../types';
+import { GLOB_SRC } from '../globs';
+import { ensurePackages, interopDefault } from '../utils';
 
 // react refresh
 const ReactRefreshAllowConstantExportPackages = ['vite'];
@@ -53,7 +53,6 @@ export async function react(
         'react-plugin': plugins['@eslint-react'],
         'react-dom': plugins['@eslint-react/dom'],
         'react-hooks': pluginReactHooks,
-        'react-hooks-extra': plugins['@eslint-react/hooks-extra'],
         'react-naming-convention': plugins['@eslint-react/naming-convention'],
         'react-refresh': pluginReactRefresh,
       },
@@ -112,7 +111,7 @@ export async function react(
         ],
 
         // recommended rules from @eslint-react
-        'react-plugin/no-useless-forward-ref': 'warn',
+        'react-plugin/no-forward-ref': 'warn',
         'react-plugin/no-access-state-in-setstate': 'error',
         'react-plugin/no-array-index-key': 'warn',
         'react-plugin/no-children-count': 'warn',
@@ -136,7 +135,6 @@ export async function react(
         'react-plugin/no-set-state-in-component-did-mount': 'warn',
         'react-plugin/no-set-state-in-component-did-update': 'warn',
         'react-plugin/no-set-state-in-component-will-update': 'warn',
-        'react-plugin/no-string-refs': 'error',
         'react-plugin/no-unsafe-component-will-mount': 'warn',
         'react-plugin/no-unsafe-component-will-receive-props': 'warn',
         'react-plugin/no-unsafe-component-will-update': 'warn',
@@ -185,6 +183,8 @@ export async function react(
         'react/self-closing-comp': 'warn',
         // 禁止循环没有key
         'react/jsx-key': 'warn',
+
+        'react/no-string-refs': 'error',
 
         ...(emotion
           ? {

@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/eslint-config-prettier",
   "type": "module",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "",
   "author": "jsxiaosi",
   "license": "MIT",
@@ -38,7 +38,7 @@
     "prettier-plugin-tailwindcss": ">=0.5"
   },
   "dependencies": {
-    "prettier": "^3.7.3"
+    "prettier": "^3.8.1"
   },
   "devDependencies": {
     "prettier-plugin-tailwindcss": "^0.7.2"

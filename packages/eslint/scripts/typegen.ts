@@ -1,7 +1,8 @@
-import fs from 'node:fs/promises';
 import { flatConfigsToRulesDTS } from 'eslint-typegen/core';
 import { builtinRules } from 'eslint/use-at-your-own-risk';
+import fs from 'node:fs/promises';
 
+import type { Awaitable, TypedFlatConfigItem } from '../src/types';
 import {
   comments,
   ignores,
@@ -20,7 +21,6 @@ import {
   vue,
   yaml,
 } from '../src';
-import type { Awaitable, TypedFlatConfigItem } from '../src/types';
 
 async function combine(
   ...configs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]>[]

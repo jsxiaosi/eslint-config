@@ -1,5 +1,5 @@
-import { pluginPerfectionist } from '../plugins';
 import type { TypedFlatConfigItem } from '../types';
+import { pluginPerfectionist } from '../plugins';
 
 /**
  * Perfectionist plugin for props and items sorting.
@@ -15,18 +15,36 @@ export async function perfectionist(): Promise<TypedFlatConfigItem[]> {
       },
       rules: {
         'perfectionist/sort-exports': ['error', { order: 'asc', type: 'natural' }],
+        // 'perfectionist/sort-imports': [
+        //   'error',
+        //   {
+        //     groups: [
+        //       'builtin',
+        //       'external',
+        //       'type',
+        //       ['internal', 'internal-type'],
+        //       ['parent', 'sibling', 'index'],
+        //       ['parent-type', 'sibling-type', 'index-type'],
+        //       'side-effect',
+        //       'object',
+        //       'unknown',
+        //     ],
+        //     newlinesBetween: 'ignore',
+        //     order: 'asc',
+        //     type: 'natural',
+        //   },
+        // ],
         'perfectionist/sort-imports': [
           'error',
           {
             groups: [
-              'builtin',
-              'external',
-              'type',
-              ['internal', 'internal-type'],
-              ['parent', 'sibling', 'index'],
-              ['parent-type', 'sibling-type', 'index-type'],
+              'type-import',
+              ['value-builtin', 'value-external'],
+              'type-internal',
+              'value-internal',
+              ['type-parent', 'type-sibling', 'type-index'],
+              ['value-parent', 'value-sibling', 'value-index'],
               'side-effect',
-              'object',
               'unknown',
             ],
             newlinesBetween: 'ignore',
