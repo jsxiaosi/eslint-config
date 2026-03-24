@@ -1,6 +1,8 @@
+import type { Linter } from 'eslint';
 import { FlatConfigComposer } from 'eslint-flat-config-utils';
 import { isPackageExists } from 'local-pkg';
-import type { Linter } from 'eslint';
+import type { ConfigNames, RuleOptions } from './typegen';
+import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types';
 import {
   comments,
   ignores,
@@ -21,8 +23,6 @@ import {
   vue,
   yaml,
 } from './config';
-import type { ConfigNames, RuleOptions } from './typegen';
-import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from './types';
 
 const flatConfigProps = [
   'name',

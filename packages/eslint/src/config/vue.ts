@@ -1,5 +1,3 @@
-import { GLOB_VUE } from '../globs';
-import { ensurePackages, interopDefault } from '../utils';
 import type {
   OptionsFiles,
   OptionsHasPrettier,
@@ -8,6 +6,8 @@ import type {
   OptionsVue,
   TypedFlatConfigItem,
 } from '../types';
+import { GLOB_VUE } from '../globs';
+import { ensurePackages, interopDefault } from '../utils';
 
 export async function vue(
   options: OptionsVue & OptionsHasTypeScript & OptionsHasPrettier & OptionsOverrides & OptionsFiles = {},

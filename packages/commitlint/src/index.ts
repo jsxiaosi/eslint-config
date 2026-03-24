@@ -1,6 +1,6 @@
-import { RuleConfigSeverity } from '@commitlint/types';
-
 import type { UserConfig } from 'czg';
+
+import { RuleConfigSeverity } from '@commitlint/types';
 
 export const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],

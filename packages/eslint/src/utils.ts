@@ -1,5 +1,5 @@
-import { fileURLToPath } from 'node:url';
 import { isPackageExists } from 'local-pkg';
+import { fileURLToPath } from 'node:url';
 import type { Awaitable, TypedFlatConfigItem } from './types';
 
 const scopeUrl = fileURLToPath(new URL('.', import.meta.url));

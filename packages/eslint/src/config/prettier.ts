@@ -1,6 +1,6 @@
-import { ensurePackages, interopDefault } from '../utils';
 import type { OptionsPrettier, TypedFlatConfigItem } from '../types';
 import type { PrettierOptions } from '../vender/prettier-types';
+import { ensurePackages, interopDefault } from '../utils';
 
 export async function prettier(options: OptionsPrettier = {}): Promise<TypedFlatConfigItem[]> {
   await ensurePackages(['eslint-plugin-prettier', 'prettier']);
