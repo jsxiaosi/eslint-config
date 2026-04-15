@@ -1,7 +1,7 @@
 {
   "name": "@jsxiaosi/linting-configs",
   "type": "module",
-  "version": "1.0.17",
+  "version": "1.0.24",
   "private": true,
   "description": "eslint 配置",
   "publishConfig": {
@@ -24,6 +24,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bump package.json packages/*/package.json",
     "release:eslint": "pnpm run -C packages/eslint release",
+    "smoke": "node scripts/smoke-check.mjs",
+    "smoke:eslint": "node scripts/smoke-check.mjs eslint",
+    "smoke:prettier": "node scripts/smoke-check.mjs prettier",
+    "smoke:commitlint": "node scripts/smoke-check.mjs commitlint",
     "lint:eslint": "eslint ./packages --fix ",
     "lint:test_eslint": "eslint . ",
     "lint:prettier": "prettier . --write",
@@ -43,22 +47,22 @@
     "@jsxiaosi/commitlint-config": "workspace:*",
     "@jsxiaosi/eslint-config": "workspace:*",
     "@jsxiaosi/eslint-config-prettier": "workspace:*",
-    "globals": "^16.5.0"
+    "globals": "^17.4.0"
   },
   "devDependencies": {
     "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@types/node": "^24.10.1",
-    "commitlint": "^20.1.0",
+    "@types/node": "^25.5.0",
+    "commitlint": "^20.5.0",
     "conventional-changelog-cli": "^5.0.0",
     "czg": "^1.12.0",
-    "eslint": "^9.39.1",
-    "glob": "10.5.0",
+    "eslint": "^10.1.0",
+    "glob": "13.0.6",
     "husky": "^9.1.7",
-    "prettier": "^3.7.3",
+    "prettier": "^3.8.1",
     "rolldown": "1.0.0-beta.53",
     "rolldown-plugin-dts": "^0.18.3",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.2"
   },
   "resolutions": {
     "typescript": "^5.7.2"

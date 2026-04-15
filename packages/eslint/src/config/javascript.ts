@@ -395,6 +395,9 @@ export async function javascript(option: OptionsOverrides = {}): Promise<TypedFl
         // 禁止 Yoda 条件（即常量在比较运算符前面）
         yoda: ['error', 'never'],
 
+        // perfectionist/sort-imports 代替
+        'sort-imports': 'off',
+
         ...overrides,
       },
     },

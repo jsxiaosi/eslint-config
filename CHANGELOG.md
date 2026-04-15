@@ -1,11 +1,57 @@
+## <small>1.0.24 (2026-03-24)</small>
+
+
+
+
+## <small>1.0.23 (2026-03-14)</small>
+
+* feat: ✨ v1.0.23 ([99857e7](https://github.com/jsxiaosi/eslint-config/commit/99857e7))
+* ci: 🛠 contents: write ([1062a82](https://github.com/jsxiaosi/eslint-config/commit/1062a82))
+* ci: 🛠 release changelog jobs ([e6424a7](https://github.com/jsxiaosi/eslint-config/commit/e6424a7))
+
+
+
+## <small>1.0.22 (2026-03-14)</small>
+
+* feat: ✨ v1.0.22 ([b60f6c8](https://github.com/jsxiaosi/eslint-config/commit/b60f6c8))
+* ci: 🛠 permissions id-token write ([2c36334](https://github.com/jsxiaosi/eslint-config/commit/2c36334))
+
+
+
+## <small>1.0.21 (2026-03-13)</small>
+
+* feat: ✨ v1.0.21 ([2e39be2](https://github.com/jsxiaosi/eslint-config/commit/2e39be2))
+* ci: 🛠 删除nodetoken ([4467fee](https://github.com/jsxiaosi/eslint-config/commit/4467fee))
+
+
+
+## <small>1.0.20 (2026-03-13)</small>
+
+* feat(commitlint,eslint,prettier): ✨ v1.0.19 ([99ced7d](https://github.com/jsxiaosi/eslint-config/commit/99ced7d))
+* feat(commitlint,eslint,prettier): ✨ v1.0.20 ([4a897c3](https://github.com/jsxiaosi/eslint-config/commit/4a897c3))
+* fix(commitlint): 🐛 Cannot find module commitlint/types or its corresponding type declarations ([83df936](https://github.com/jsxiaosi/eslint-config/commit/83df936))
+* ci: 🛠 publish ci/cd node-version lts ([e3c881f](https://github.com/jsxiaosi/eslint-config/commit/e3c881f))
+
+
+
+## <small>1.0.18 (2026-03-13)</small>
+
+* build(commitlint,eslint,prettier): 📦️ - Eslint 升级依赖、解决perfectionist/sort-imports 和 sort-imports冲突问题 ([4a7c78e](https://github.com/jsxiaosi/eslint-config/commit/4a7c78e))
+* build(commitlint,eslint,prettier): 📦️ 升级插件依赖 ([82edfe2](https://github.com/jsxiaosi/eslint-config/commit/82edfe2))
+* feat(commitlint,eslint,prettier): ✨ v1.0.18 ([8fa5ae6](https://github.com/jsxiaosi/eslint-config/commit/8fa5ae6))
+* build: 📦️ glob cli 安全警告 ([9d8e329](https://github.com/jsxiaosi/eslint-config/commit/9d8e329)), closes [#22](https://github.com/jsxiaosi/eslint-config/issues/22)
+
+
+
 ## <small>1.0.17 (2025-10-26)</small>
 
+* feat: ✨ v1.0.17 ([f67f5e0](https://github.com/jsxiaosi/eslint-config/commit/f67f5e0))
+* feat: ✨ v1.0.17 ([e4f322e](https://github.com/jsxiaosi/eslint-config/commit/e4f322e))
+* feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 * chore(commitlint,eslint,prettier): 🔨 package.json add repository ([afcd5ce](https://github.com/jsxiaosi/eslint-config/commit/afcd5ce))
 * ci: 🛠 add publish action ([dc261c5](https://github.com/jsxiaosi/eslint-config/commit/dc261c5))
 * ci: 🛠 publish 依赖安装 ([9e92752](https://github.com/jsxiaosi/eslint-config/commit/9e92752))
 * ci(publish): 🛠 pnpm add --no-git-checks ([4e0217e](https://github.com/jsxiaosi/eslint-config/commit/4e0217e))
-* feat: ✨ v1.0.17 ([e4f322e](https://github.com/jsxiaosi/eslint-config/commit/e4f322e))
-* feat: ✨ v1.0.17 ([b10ae4d](https://github.com/jsxiaosi/eslint-config/commit/b10ae4d))
 
 
 

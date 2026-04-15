@@ -1,46 +1,47 @@
 # @jsxiaosi/eslint-config-prettier
 
-- 合理的默认配置
-- 支持Vue，支持Typescript，Jsx格式化
-- 使用简单无需繁琐的添加配置
+共享 Prettier 配置，默认输出 LF、120 列、2 空格缩进、单引号和 trailing comma。
+
+## 运行要求
+
+- Node `>=14`
+- `prettier` `>=3.0.0`
+- 可选：`prettier-plugin-tailwindcss` `>=0.5`
 
 ## 安装
 
-```base
-pnpm add -D @jsxiaosi/eslint-config-prettier prettier
+```bash
+pnpm add -D prettier @jsxiaosi/eslint-config-prettier
 ```
 
-## 配置.prettier.config.js
+## 基础用法
 
-```JavaScript
+`prettier.config.mjs`
+
+```js
 import prettierConfig from '@jsxiaosi/eslint-config-prettier';
 
 export default prettierConfig();
-
 ```
 
-### 自定义 Prettier
-```JavaScript
+## 自定义 Prettier 选项
+
+```js
 import prettierConfig from '@jsxiaosi/eslint-config-prettier';
 
 export default prettierConfig({
-  plugins: [ /** plugin */ ]
-  printWidth: 120,
-  tabWidth: 2,
-  useTabs: false,
+  printWidth: 100,
+  semi: false,
 });
 ```
 
-### Tailwind CSS 类名排序支持
-
-#### 安装依赖
+## Tailwind CSS 类名排序
 
 ```bash
-pnpm add prettier-plugin-tailwindcss -D
+pnpm add -D prettier-plugin-tailwindcss
 ```
 
-#### 配置方式
-```JavaScript
+```js
 import prettierConfig from '@jsxiaosi/eslint-config-prettier';
 
 export default prettierConfig({
@@ -48,37 +49,18 @@ export default prettierConfig({
 });
 ```
 
-## 配合Eslint使用
+## 配合 ESLint 使用
 
-eslint.config.js 添加配置
+如果你同时启用了 `@jsxiaosi/eslint-config` 的 Prettier 规则，建议让 ESLint 读取同一份 Prettier 配置文件：
 
-```JavaScript
+`eslint.config.mjs`
+
+```js
 import jsxiaosi from '@jsxiaosi/eslint-config';
 
-export default jsxiaosi(
-  {
-    prettier: {
-      usePrettierrc: true,
-    },
+export default jsxiaosi({
+  prettier: {
+    usePrettierrc: true,
   },
-);
-```
-
-## 添加命令
-
-```json
-{
-  "lint:fix": "eslint . --fix"
-}
-```
-
-## VS Code 自动修复
-
-```json
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
-
+});
 ```

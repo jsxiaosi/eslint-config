@@ -1,20 +1,24 @@
 name: Publish
 
 permissions:
+  id-token: write  # Required for OIDC
   contents: write
+
 
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
 
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
       - name: 🧭 Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: ⚙️ Setup pnpm
         uses: pnpm/action-setup@v3
@@ -24,18 +28,36 @@ jobs:
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: lts/*
           registry-url: 'https://registry.npmjs.org/'
 
       - name: 📦 Install dependencies
         run: pnpm install
 
-
       - name: 🏗️ Build package
         run: pnpm run build
-      
-      
+
       - name: 🚀 Publish to npm
         run: pnpm publish -r --no-git-checks
+
+      - name: 📝 Create GitHub release notes
+        run: npx changelogithub
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set node
+        uses: actions/setup-node@v4
+        with:
+          registry-url: https://registry.npmjs.org/
+          node-version: lts/*
+
+      - run: npx changelogithub # or changelogithub@0.12 if ensure the stable result
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
