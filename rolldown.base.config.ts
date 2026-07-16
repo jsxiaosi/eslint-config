@@ -1,6 +1,6 @@
+import type { RolldownOptions } from 'rolldown';
 import { defineConfig } from 'rolldown';
 import { dts } from 'rolldown-plugin-dts';
-import type { RolldownOptions } from 'rolldown';
 
 export const rolldownConfig = (pkg: Record<string, any>) => {
   const externals = [
@@ -30,7 +30,7 @@ export const rolldownConfig = (pkg: Record<string, any>) => {
     },
     {
       ...defaultRolldownOptions,
-      plugins: [dts({ resolve: true })],
+      plugins: [dts({ resolver: 'tsc' })],
     },
   ]);
 };

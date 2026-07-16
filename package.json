@@ -29,43 +29,43 @@
     "smoke:prettier": "node scripts/smoke-check.mjs prettier",
     "smoke:commitlint": "node scripts/smoke-check.mjs commitlint",
     "lint:eslint": "eslint ./packages --fix ",
-    "lint:test_eslint": "eslint . ",
+    "lint:test_eslint": "eslint ./fixtures",
     "lint:prettier": "prettier . --write",
     "prepare": "husky",
     "cz": "czg",
     "log": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -r 0",
-    "build": "npm run build:eslint && npm run build:commitlint && npm run build:perttier",
+    "build": "pnpm build:eslint && pnpm build:commitlint && pnpm build:prettier",
     "build:eslint": "pnpm run -C packages/eslint build",
-    "build:perttier": "pnpm run -C packages/prettier build",
+    "build:prettier": "pnpm run -C packages/prettier build",
     "build:commitlint": "pnpm run -C packages/commitlint build",
     "typegen": "pnpm run -C packages/eslint typegen",
-    "tag": "npm run release && npm run log",
-    "prepublishOnly": "npm run build",
-    "postinstall": "npm run build"
+    "tag": "pnpm run release && pnpm log",
+    "prepublishOnly": "pnpm run build",
+    "postinstall": "pnpm run build"
   },
   "dependencies": {
     "@jsxiaosi/commitlint-config": "workspace:*",
     "@jsxiaosi/eslint-config": "workspace:*",
     "@jsxiaosi/eslint-config-prettier": "workspace:*",
-    "globals": "^17.4.0"
+    "globals": "catalog:"
   },
   "devDependencies": {
-    "@jsdevtools/version-bump-prompt": "^6.1.0",
-    "@types/node": "^25.5.0",
-    "commitlint": "^20.5.0",
-    "conventional-changelog-cli": "^5.0.0",
-    "czg": "^1.12.0",
-    "eslint": "^10.1.0",
-    "glob": "13.0.6",
-    "husky": "^9.1.7",
-    "prettier": "^3.8.1",
-    "rolldown": "1.0.0-beta.53",
-    "rolldown-plugin-dts": "^0.18.3",
-    "tsup": "^8.5.1",
-    "typescript": "^6.0.2"
+    "@jsdevtools/version-bump-prompt": "catalog:",
+    "@types/node": "catalog:",
+    "commitlint": "catalog:",
+    "conventional-changelog-cli": "catalog:",
+    "czg": "catalog:",
+    "eslint": "catalog:",
+    "glob": "catalog:",
+    "husky": "catalog:",
+    "prettier": "catalog:",
+    "rolldown": "catalog:",
+    "rolldown-plugin-dts": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "resolutions": {
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.2"
   },
   "config": {
     "commitizen": {

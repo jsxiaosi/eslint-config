@@ -26,7 +26,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc",
+    "build:tsup": "tsc",
+    "build": "rolldown -c",
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
@@ -37,14 +38,15 @@
     "husky": ">=8.0.0"
   },
   "dependencies": {
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "commitizen": "^4.3.1",
-    "commitlint": "^20.5.0"
+    "@commitlint/cli": "catalog:commitlint",
+    "@commitlint/config-conventional": "catalog:commitlint",
+    "commitizen": "catalog:commitlint",
+    "commitlint": "catalog:"
   },
+  "optionalDependencies": {},
   "devDependencies": {
-    "@commitlint/types": "^20.5.0",
-    "czg": "^1.12.0",
-    "tsup": "^8.5.1"
+    "@commitlint/types": "catalog:commitlint",
+    "czg": "catalog:",
+    "tsup": "catalog:"
   }
 }

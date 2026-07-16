@@ -16,6 +16,7 @@ import {
   perfectionist,
   prettier,
   react,
+  stylistic,
   toml,
   typescript,
   vue,
@@ -53,6 +54,7 @@ const configs = await combine(
   vue(),
   yaml(),
   toml(),
+  stylistic(),
 );
 
 const configNames = configs.map(i => i.name).filter(Boolean) as string[];

@@ -1,3 +1,4 @@
+import type { StylisticCustomizeOptions } from '@stylistic/eslint-plugin';
 import type { ParserOptions } from '@typescript-eslint/parser';
 import type { Linter } from 'eslint';
 import type { RuleOptions } from './typegen';
@@ -78,9 +79,13 @@ export interface OptionsTypeScriptWithTypes {
   overridesTypeAware?: TypedFlatConfigItem['rules'];
 }
 
+export interface OptionsStylisticConfig extends Pick<
+  StylisticCustomizeOptions,
+  'indent' | 'semi' | 'quotes' | 'quoteProps' | 'commaDangle' | 'arrowParens' | 'jsx' | 'blockSpacing' | 'braceStyle'
+> {}
+
 export type OptionsTypescript =
-  | (OptionsTypeScriptWithTypes & OptionsOverrides)
-  | (OptionsTypeScriptParserOptions & OptionsOverrides);
+  (OptionsTypeScriptWithTypes & OptionsOverrides) | (OptionsTypeScriptParserOptions & OptionsOverrides);
 
 export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType {
   /**
@@ -170,6 +175,17 @@ export interface OptionsConfig extends OptionsComponentExts, OptionsProjectType 
    * @default true
    */
   toml?: boolean | OptionsOverrides;
+
+  /**
+   * Enable stylistic rules.
+   *
+   * When enabled, ESLint Stylistic will be used to enforce code formatting rules.
+   * You can pass an object to customize stylistic preferences such as indent,
+   * quotes, semicolons, JSX, trailing commas, and arrow parens.
+   *
+   * @default true
+   */
+  stylistic?: boolean | OptionsStylisticConfig;
 }
 
 export interface OptionsHasTypeScript {

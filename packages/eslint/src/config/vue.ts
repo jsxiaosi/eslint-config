@@ -156,6 +156,7 @@ export async function vue(
             math: 'always',
           },
         ],
+        'vue/script-indent': ['error', 2, { baseIndent: 1 }],
 
         ...(options.prettier
           ? { 'vue/singleline-html-element-content-newline': 'off', 'vue/html-indent': 'off' }

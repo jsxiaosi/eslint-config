@@ -31,16 +31,18 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup --format esm,cjs"
+    "build:tsup": "tsup --format esm,cjs",
+    "build": "rolldown -c"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0",
     "prettier-plugin-tailwindcss": ">=0.5"
   },
   "dependencies": {
-    "prettier": "^3.8.1"
+    "prettier": "catalog:"
   },
+  "optionalDependencies": {},
   "devDependencies": {
-    "prettier-plugin-tailwindcss": "^0.7.2"
+    "prettier-plugin-tailwindcss": "catalog:"
   }
 }

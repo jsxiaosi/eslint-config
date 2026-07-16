@@ -18,6 +18,7 @@ import {
   react,
   sortPackageJson,
   sortTsconfig,
+  stylistic,
   toml,
   typescript,
   vue,
@@ -38,9 +39,18 @@ export function jsxiaosi(
   options: OptionsConfig & Omit<TypedFlatConfigItem, 'files'> = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
-  const { componentExts = [], typescript: enableTypeScript = isPackageExists('typescript') } = options;
+  const {
+    componentExts = [],
+    typescript: enableTypeScript = isPackageExists('typescript'),
+    jsx: enableJsx = true,
+  } = options;
 
   const typescriptOptions = resolveSubOptions(options, 'typescript');
+
+  const stylisticOptions =
+    options.stylistic === false ? false : typeof options.stylistic === 'object' ? options.stylistic : {};
+
+  if (stylisticOptions && !('jsx' in stylisticOptions)) stylisticOptions.jsx = enableJsx;
 
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [
     ignores(options.ignores),
@@ -53,7 +63,13 @@ export function jsxiaosi(
 
   configs.push(javascript({ overrides: getOverrides(options, 'javascript') }));
 
-  configs.push(jsx());
+  if (enableJsx) {
+    configs.push(jsx());
+  }
+
+  if (stylisticOptions) {
+    configs.push(stylistic(options));
+  }
 
   if (options.jsonc ?? true) {
     configs.push(

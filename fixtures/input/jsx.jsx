@@ -20,3 +20,6 @@ export function HelloWorld({
     </div>;
 
 }
+
+
+export default () => <div />;
