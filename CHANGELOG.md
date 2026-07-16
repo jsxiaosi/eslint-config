@@ -1,5 +1,14 @@
+## <small>1.0.25 (2026-07-16)</small>
+
+* chore: update pnpm workspace configuration and dependencies ([4570a62](https://github.com/jsxiaosi/eslint-config/commit/4570a62))
+* build(eslint,commitlint,prettier): 📦️ rolldown 打包配置 ([5da1b68](https://github.com/jsxiaosi/eslint-config/commit/5da1b68))
+
+
+
 ## <small>1.0.24 (2026-03-24)</small>
 
+* feat(commitlint,eslint,prettier): ✨ 更新依赖 ([23b24f2](https://github.com/jsxiaosi/eslint-config/commit/23b24f2))
+* style(commitlint,eslint,prettier): 💄 auto fix ([c6b9a68](https://github.com/jsxiaosi/eslint-config/commit/c6b9a68))
 
 
 
