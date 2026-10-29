@@ -21,7 +21,7 @@
     "eslint"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test scripts/compatibility.test.mjs",
     "release": "bump package.json packages/*/package.json",
     "release:eslint": "pnpm run -C packages/eslint release",
     "smoke": "node scripts/smoke-check.mjs",
@@ -64,12 +64,13 @@
     "tsup": "catalog:",
     "typescript": "catalog:"
   },
-  "resolutions": {
-    "typescript": "^6.0.2"
-  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git"
     }
-  }
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "packageManager": "pnpm@10.34.0"
 }

@@ -48,5 +48,8 @@
     "@commitlint/types": "catalog:commitlint",
     "czg": "catalog:",
     "tsup": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

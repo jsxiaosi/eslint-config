@@ -137,12 +137,6 @@ export async function react(
         'react-plugin/no-missing-component-display-name': 'off',
         'react-plugin/no-missing-context-display-name': 'off',
 
-        ...(emotion
-          ? {
-              'react/no-unknown-property': ['error', { ignore: ['css'] }],
-            }
-          : {}),
-
         ...(isTypeAware
           ? {
               'react-plugin/no-implicit-key': 'error',

@@ -4,7 +4,7 @@
 
 ## 运行要求
 
-- Node `>=18`
+- Node `>=22.12.0`（当前依赖 Commitlint 21 的运行要求）
 - `@commitlint/cli` `>=20`
 - `@commitlint/config-conventional` `>=20`
 - `commitlint` `>=20`

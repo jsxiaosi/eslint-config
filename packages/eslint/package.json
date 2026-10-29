@@ -40,7 +40,6 @@
     "@eslint-react/eslint-plugin": ">=3",
     "eslint": ">=10",
     "eslint-plugin-prettier": ">=5",
-    "eslint-plugin-react": ">=7",
     "eslint-plugin-react-hooks": ">=7",
     "eslint-plugin-react-refresh": ">=0.4.20",
     "eslint-plugin-vue": ">=10",
@@ -55,9 +54,6 @@
       "optional": true
     },
     "eslint-plugin-prettier": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
       "optional": true
     },
     "eslint-plugin-react-hooks": {
@@ -103,7 +99,6 @@
     "eslint-flat-config-utils": "catalog:eslint-dev",
     "eslint-plugin-format": "catalog:eslint-dev",
     "eslint-plugin-prettier": "catalog:eslint-dev",
-    "eslint-plugin-react": "catalog:eslint-dev",
     "eslint-plugin-react-hooks": "catalog:eslint-dev",
     "eslint-plugin-react-refresh": "catalog:eslint-dev",
     "eslint-plugin-vue": "catalog:eslint-dev",
@@ -112,5 +107,8 @@
     "prettier-plugin-slidev": "catalog:eslint-dev",
     "tsx": "catalog:eslint-dev",
     "vue-eslint-parser": "catalog:eslint-dev"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
   }
 }

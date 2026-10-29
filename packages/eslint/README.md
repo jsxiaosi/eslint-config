@@ -4,9 +4,9 @@
 
 ## 公开兼容性
 
-- 基础包当前对外声明的 peer contract 是 `eslint >=9.10.0`；`package.json` 目前不声明 `engines.node`
-- 开启 `react: true` 时，需要额外安装 React lint 依赖，并满足这些依赖自己的 Node floor；当前仓库锁文件解析到 `@eslint-react/eslint-plugin@2.13.0`，其 `engines.node` 为 `>=20.19.0`
-- 这个 monorepo 以及 `publish.yml` 的开发/发布环境当前使用 Node `^20.19.0 || ^22.13.0 || >=24.0.0`
+- 基础包对外声明 `eslint >=10`，Node `^22.22.2 || ^24.15.0 || >=26.0.0`；Node floor 来自 JSDoc 等运行依赖
+- React 使用 `@eslint-react/eslint-plugin`、`eslint-plugin-react-hooks` 和 `eslint-plugin-react-refresh`，不再需要 `eslint-plugin-react`；Emotion 的 `css` 属性由 `react-plugin/dom-no-unknown-property` 的忽略项处理
+- monorepo 和发布流程使用上述 Node 范围，CI 覆盖 Node 22.22.2、24、26
 - 如果项目使用 TypeScript，请安装 `typescript`；安装后会自动启用 TypeScript 规则
 
 ## 安装
@@ -20,7 +20,7 @@ pnpm add -D eslint @jsxiaosi/eslint-config typescript
 按需安装可选能力：
 
 - Vue: `pnpm add -D eslint-plugin-vue vue-eslint-parser`
-- React: `pnpm add -D @eslint-react/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh`
+- React: `pnpm add -D @eslint-react/eslint-plugin eslint-plugin-react-hooks eslint-plugin-react-refresh`
 - Prettier: `pnpm add -D eslint-plugin-prettier prettier`
 
 启用对应能力但未安装依赖时，配置会在运行时提示安装缺失包。
